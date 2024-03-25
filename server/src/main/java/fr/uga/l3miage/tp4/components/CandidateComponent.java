@@ -10,7 +10,7 @@ public class CandidateComponent {
     /* TODO à implémenter
     public Set<CandidateEntity> getAllEliminatedCandidate(){
         return null;
-    }
+    } hello
     */
 
 }
