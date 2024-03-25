@@ -16,7 +16,7 @@ public class ExamEntity {
     @ManyToOne()
     private EcosSessionEntity ecosSessionEntity;
 
-    @ManyToMany()
+    @ManyToMany(mappedBy = "examEntities")
     private Set<SkillEntity> skillEntities;
 
 }

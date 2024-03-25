@@ -10,6 +10,6 @@ public class SkillEntity {
     @Id
     @Column(unique = true) private String name;
 
-    @ManyToMany(mappedBy = "skillEntities")
+    @ManyToMany()
     private Set<ExamEntity> examEntities;
 }
