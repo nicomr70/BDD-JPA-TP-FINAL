@@ -11,6 +11,7 @@ public class CandidateEvaluationGridEntity {
     @Id
     private Long SheetNumber;
 
+    @Column(precision = 2)
     private double grade;
 
     private LocalDateTime submissionDate;
@@ -20,4 +21,9 @@ public class CandidateEvaluationGridEntity {
 
     @ManyToMany
     private Set<EvaluationCriteriaEntity> evaluationCriteriaEntities;
+
+    @ManyToOne
+    private CandidateEntity candidateEntity;
+    @ManyToOne
+    private ExaminerEntity examinerEntity;
 }

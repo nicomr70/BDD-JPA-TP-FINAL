@@ -22,4 +22,7 @@ public class ExamEntity {
 
     @ManyToMany
     private Set<SkillEntity> skillEntities;
+
+    @ManyToOne
+    private EcosSessionEntity ecosSessionEntity;
 }

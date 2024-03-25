@@ -17,4 +17,6 @@ public class EvaluationCriteriaEntity {
 
     @ManyToMany(mappedBy = "evaluationCriteriaEntities")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+
+
 }
