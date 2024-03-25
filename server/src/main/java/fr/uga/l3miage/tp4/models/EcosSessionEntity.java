@@ -1,4 +1,21 @@
 package fr.uga.l3miage.tp4.models;
 
+import fr.uga.l3miage.tp4.enums.SessionStatus;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import java.time.LocalDateTime;
+
 public class EcosSessionEntity {
+    @Id
+    private Long id;
+
+    @Column(unique = true)
+    private String name;
+
+    private LocalDateTime startDate;
+
+    private LocalDateTime endDate;
+
+    private SessionStatus status;
 }
