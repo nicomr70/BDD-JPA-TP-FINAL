@@ -16,7 +16,7 @@ public class CandidateEvaluationGridEntity {
     private LocalDateTime submissionDate;
 
     @ManyToMany(mappedBy = "EvaluationGrids")
-    private Set<EvaluationCriteriaEntity> Criterias;
+    private Set<EvaluationCriteriaEntity> criterias;
 
     @ManyToOne
     private CandidateEntity candidate;
