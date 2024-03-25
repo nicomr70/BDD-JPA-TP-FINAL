@@ -5,6 +5,7 @@ import org.hibernate.Session;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 
 @Entity
@@ -20,4 +21,10 @@ public class EcosSessionEntity {
 
     @Enumerated(EnumType.STRING)
     private SessionStatus status;
+
+    @OneToMany
+    private Set<ExamEntity> exams;
+
+    @OneToOne
+    private EcosSessionProgrammationEntity sessionProgrammation;
 }

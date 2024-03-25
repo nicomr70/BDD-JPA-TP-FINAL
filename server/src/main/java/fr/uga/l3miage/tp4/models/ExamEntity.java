@@ -2,10 +2,7 @@ package fr.uga.l3miage.tp4.models;
 
 import org.hibernate.validator.constraints.UniqueElements;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -25,4 +22,7 @@ public class ExamEntity {
 
     @ManyToMany
     private Set<SkillEntity> skills;
+
+    @ManyToOne
+    private EcosSessionEntity session;
 }
