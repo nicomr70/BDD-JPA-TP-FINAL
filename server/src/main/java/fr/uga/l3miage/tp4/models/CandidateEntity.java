@@ -13,6 +13,5 @@ public class CandidateEntity extends  UserEntity{
     private boolean HasExtraTime;
 
     @ManyToOne()
-    @JoinColumn(name = "id_test_center", referencedColumnName = "id")
     private TestCenterEntity testCenter;
 }

@@ -11,7 +11,6 @@ public class ExaminerEntity extends  UserEntity {
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "id_test_center", referencedColumnName = "id")
     private TestCenterEntity testCenter;
 
 
