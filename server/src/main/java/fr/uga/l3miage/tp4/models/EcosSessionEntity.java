@@ -1,6 +1,6 @@
 package fr.uga.l3miage.tp4.models;
 
-import fr.uga.l3miage.tp4.enums.SessionStatus;
+import fr.uga.l3miage.tp4.enums.SessionStatusType;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
@@ -17,5 +17,5 @@ public class EcosSessionEntity {
 
     private LocalDateTime endDate;
 
-    private SessionStatus status;
+    private SessionStatusType status;
 }
