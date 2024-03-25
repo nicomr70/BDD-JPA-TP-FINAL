@@ -9,7 +9,8 @@ public class ExaminerEntity extends UserEntity {
     private String password;
 
     @ManyToOne
-    private Set<TestCenterEntity> testCenters;
-
+    private TestCenterEntity testCenters;
+    @OneToMany (mappedBy = "examiner")
+    private Set<CandidateEntity> candidateEntities;
 
 }
