@@ -17,7 +17,7 @@ public class CandidateEntity extends UserEntity {
 
     private Boolean hasExtraTime;
 
-    @OneToMany
+    @OneToMany(mappedBy = "candidate")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 
     @ManyToOne

@@ -13,6 +13,6 @@ public class EcosSessionProgrammationEntity {
 
     private String label;
 
-    @OneToMany
+    @OneToMany(mappedBy = "ecosSessionProgrammation")
     private Set<EcosSessionProgrammationStepEntity> sessionProgrammationSteps;
 }

@@ -22,7 +22,7 @@ public class EcosSessionEntity {
     @Enumerated(EnumType.STRING)
     private SessionStatus status;
 
-    @OneToMany
+    @OneToMany(mappedBy = "ecosSession")
     private Set<ExamEntity> exams;
 
     @OneToOne

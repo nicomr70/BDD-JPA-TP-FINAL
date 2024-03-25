@@ -25,4 +25,7 @@ public class ExamEntity {
 
     @ManyToOne
     private EcosSessionEntity session;
+
+    @OneToMany(mappedBy = "exam")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 }
