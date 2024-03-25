@@ -9,5 +9,5 @@ public class CandidateEntity extends UserEntity {
     private boolean hasExtraTime;
 
     @ManyToOne
-    private TestCenterEntity testCenter;
+    private TestCenterEntity testCenters;
 }

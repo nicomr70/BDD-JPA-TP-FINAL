@@ -12,10 +12,10 @@ public class TestCenterEntity {
     private String university;
     private String city;
 
-    @OneToMany
+    @OneToMany(mappedBy = "testCenter")
     private Set<CandidateEntity> candidates;
 
-    @OneToMany
+    @OneToMany(mappedBy = "testCenter")
     private Set<ExaminerEntity> examiners;
 
 }
