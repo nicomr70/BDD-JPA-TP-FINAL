@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -16,4 +18,10 @@ public class TestCenterEntity {
     private TestCenterCode code ;
     private String university ;
     private String city ;
+
+    @OneToMany
+    private Set<CandidateEntity> candidates ;
+
+    @OneToMany
+    private Set<ExaminerEntity> examiners ;
 }
