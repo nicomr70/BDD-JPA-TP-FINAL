@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @MappedSuperclass
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @DiscriminatorColumn(name="userType")
 public  abstract class UserEntity {
     @Id

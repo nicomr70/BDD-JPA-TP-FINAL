@@ -1,16 +1,18 @@
 package fr.uga.l3miage.tp4.models;
 
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 import java.time.LocalDate;
 
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@DiscriminatorValue("C")
+@Entity
+@DiscriminatorValue("C") // C pour Candidate
 public class CandidateEntity extends  UserEntity{
 
     private LocalDate birthDate;
 
     private boolean HasExtraTime;
+
+    @ManyToOne()
+    @JoinColumn(name = "id_test_center", referencedColumnName = "id")
+    private TestCenterEntity testCenter;
 }
