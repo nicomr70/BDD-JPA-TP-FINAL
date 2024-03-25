@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-@DiscriminatorValue("candidat")
 public class CandidateEntity extends UserEntity{
 
     private LocalDate birthDate;
