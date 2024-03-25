@@ -13,4 +13,7 @@ public class ExaminerEntity extends UserEntity {
     @ManyToOne
     private TestCenterEntity testCenterEntity;
 
+    @OneToMany(mappedBy = "examinerEntity")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+
 }
