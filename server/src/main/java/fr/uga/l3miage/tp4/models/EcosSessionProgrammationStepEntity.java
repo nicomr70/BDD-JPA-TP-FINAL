@@ -16,7 +16,7 @@ public class EcosSessionProgrammationStepEntity {
     @Id
     private  Long id;
 
- @Column(updatable = false)
+    @Column(updatable = false)
     private LocalDateTime dateTime;
     @Column(unique = true)
     private String code;
