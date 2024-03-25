@@ -1,4 +1,4 @@
-package fr.uga.l3miage.tp4.components;
+package fr.uga.l3miage.tp4.models;
 import javax.persistence.*;
 import java.util.Set;
 
@@ -8,9 +8,8 @@ public class ExaminerEntity extends UserEntity {
     private String login;
     private String password;
 
-    @ManyToMany(mappedBy = "examiner")
+    @ManyToOne
     private Set<TestCenterEntity> testCenters;
 
 
 }
-

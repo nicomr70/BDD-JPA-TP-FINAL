@@ -1,7 +1,5 @@
-package fr.uga.l3miage.tp4.components;
-
+package fr.uga.l3miage.tp4.models;
 import fr.uga.l3miage.tp4.enums.TestCenterCode;
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -14,10 +12,10 @@ public class TestCenterEntity {
     private String university;
     private String city;
 
-    @ManyToMany(mappedBy = "testCenter")
-    private Set<CandidateEntity> candidates;
+    @OneToMany
+    private Set<EvaluationCriteriaEntity.CandidateEntity> candidates;
 
-    @ManyToMany(mappedBy = "testCenter")
+    @OneToMany
     private Set<ExaminerEntity> examiners;
 
 }

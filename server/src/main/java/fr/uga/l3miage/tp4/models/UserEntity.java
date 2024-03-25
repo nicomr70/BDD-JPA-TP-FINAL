@@ -1,4 +1,4 @@
-package fr.uga.l3miage.tp4.components;
+package fr.uga.l3miage.tp4.models;
 import javax.persistence.*;
 
 
