@@ -6,5 +6,6 @@ public enum SessionStatus {
     EVAL_STARTED,
     EVAL_ENDED,
     CORRECTED,
-    FINISHED
+    FINISHED,
+    JUSTE_TESTER
 }
