@@ -1,12 +1,9 @@
 package fr.uga.l3miage.tp4.models;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 import fr.uga.l3miage.tp4.enums.SessionStatus;
 
@@ -22,14 +19,14 @@ public class EcosSessionEntity {
 
 	private LocalDateTime endDate;
 
-	private int weight;
-
+	@Enumerated(EnumType.ORDINAL)
 	private SessionStatus status;
 
 	@OneToMany(mappedBy = "session")
 	private Set<ExamEntity> exams;
 
-	@OneToOne(mappedBy = "session")
+	@OneToOne
+	@JoinColumn(name = "id_eco_session", referencedColumnName = "id")
 	private EcosSessionProgrammationEntity programmation;
 
 }

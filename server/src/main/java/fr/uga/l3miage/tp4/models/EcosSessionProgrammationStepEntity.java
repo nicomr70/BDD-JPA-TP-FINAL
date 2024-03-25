@@ -8,17 +8,17 @@ import javax.persistence.*;
 public class EcosSessionProgrammationStepEntity {
 	@Id
 	private Long id;
-	
-	@Column(nullable = false, unique = true)
+
+	@Column(updatable = false)
+	private LocalDateTime dateTime;
+
+	@Column(unique = true)
 	private String code;
-	
-	private final LocalDateTime dateTime; 
-	
+
 	@Column(nullable = false)
 	private String description;
 
 	@ManyToOne
-	@JoinColumn(name = "programmation_id")
 	private EcosSessionProgrammationEntity programmation;
 
 }
