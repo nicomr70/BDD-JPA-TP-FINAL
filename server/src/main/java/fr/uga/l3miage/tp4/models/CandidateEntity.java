@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import java.time.LocalDate;
 @Getter
@@ -13,6 +14,6 @@ public class CandidateEntity extends UserEntity{
 
     private LocalDate birthDate;
     private boolean hasExtraTime;
-    @OneToOne
+    @ManyToOne
     private TestCenterEntity testCenter;
 }
