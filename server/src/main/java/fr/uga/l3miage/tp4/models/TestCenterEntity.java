@@ -8,7 +8,7 @@ import java.util.Set;
 @Entity
 public class TestCenterEntity {
     @Id
-    private long id;
+    private Long id;
     @Enumerated(EnumType.STRING)
     private TestCenterCode code;
     private String university;
