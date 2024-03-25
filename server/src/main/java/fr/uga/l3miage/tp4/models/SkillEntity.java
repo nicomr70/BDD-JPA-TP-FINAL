@@ -11,6 +11,6 @@ public class SkillEntity {
     @Column(unique=true)
     private String name;
 
-    @ManyToMany
-    private Set<ExamEntity> exams;
+//    @ManyToMany
+//    private Set<ExamEntity> exams;
 }

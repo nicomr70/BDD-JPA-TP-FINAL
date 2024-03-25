@@ -13,10 +13,6 @@ public class EcosSessionProgrammationEntity {
 
 
 
-    @OneToMany(mappedBy = "programmation")
-    private Set<EcosSessionProgrammationStepEntity> steps;
-	
-
-
-    // Constructors, getters, and setters
+//    @OneToMany(mappedBy = "programmation")
+//    private Set<EcosSessionProgrammationStepEntity> steps;
 }

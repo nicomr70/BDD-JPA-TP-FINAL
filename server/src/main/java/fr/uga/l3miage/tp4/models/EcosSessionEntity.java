@@ -22,11 +22,11 @@ public class EcosSessionEntity {
 	@Enumerated(EnumType.ORDINAL)
 	private SessionStatus status;
 
-	@OneToMany(mappedBy = "session")
-	private Set<ExamEntity> exams;
-
-	@OneToOne
-	@JoinColumn(name = "id_eco_session", referencedColumnName = "id")
-	private EcosSessionProgrammationEntity programmation;
+//	@OneToMany(mappedBy = "session")
+//	private Set<ExamEntity> exams;
+//
+//	@OneToOne
+//	@JoinColumn(name = "id_eco_session", referencedColumnName = "id")
+//	private EcosSessionProgrammationEntity programmation;
 
 }

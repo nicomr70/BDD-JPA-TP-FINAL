@@ -15,11 +15,11 @@ public class TestCenterEntity {
 
     private String city;
 
-    @OneToMany(mappedBy = "testCenter")
-    private Set<CandidateEntity> candidateEntities;
-
-    @OneToMany(mappedBy = "testCenter")
-    private Set<ExaminerEntity> examinerEntities;
+//    @OneToMany(mappedBy = "testCenter")
+//    private Set<CandidateEntity> candidateEntities;
+//
+//    @OneToMany(mappedBy = "testCenter")
+//    private Set<ExaminerEntity> examinerEntities;
 
 
 }
