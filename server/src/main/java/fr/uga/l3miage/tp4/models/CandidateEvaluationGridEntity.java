@@ -11,4 +11,10 @@ public class CandidateEvaluationGridEntity {
     private double grade;
 
     private LocalDateTime submissionDate;
+
+    @ManyToOne
+    private EvaluationCriteriaEntity evaluationCriteriaEntity;
+
+    @ManyToOne
+    private ExamEntity exam;
 }
