@@ -1,3 +1,3 @@
 public class HelloWorld {
-    // jkwbguoihgpuoms n ljH
+    // BONJOUR LE MONDE
 }
