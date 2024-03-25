@@ -1,10 +1,13 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.Getter;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
+@Getter
 public class ExamEntity {
     @Id
     private Long id;
