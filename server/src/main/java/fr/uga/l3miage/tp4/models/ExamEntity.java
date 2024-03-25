@@ -11,16 +11,13 @@ public class ExamEntity {
     @Column(name="id")
     private Long id;
 
-    @Column(name="name", unique=true)
+    @Column(unique=true)
     private String name;
 
-    @Column(name = "start_date")
     private LocalDateTime startDate;
 
-    @Column(name = "end_date")
     private LocalDateTime endDate;
 
-    @Column(name="status")
     private SessionStatus status;
 
 }
