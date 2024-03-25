@@ -1,9 +1,10 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.time.LocalDate;
+import javax.persistence.*;
+
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 public class CandidateEvaluationGridEntity {
@@ -12,5 +13,6 @@ public class CandidateEvaluationGridEntity {
     private double grade ;
     private LocalDateTime submissionDate;
 
-
+    @ManyToOne
+    private ExamEntity exam;
 }
