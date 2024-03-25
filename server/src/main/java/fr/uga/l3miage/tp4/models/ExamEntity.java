@@ -1,11 +1,13 @@
 package fr.uga.l3miage.tp4.models;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Locale;
 
+@Entity
 public class ExamEntity {
     @Id
     private Long id;
