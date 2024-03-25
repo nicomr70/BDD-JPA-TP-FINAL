@@ -10,8 +10,8 @@ public class EvaluationCriteriaEntity {
     @Column(nullable = false)
     private String description;
     private boolean hasCandidatePerformedCriteria;
-    @ManyToMany(mappedBy = "evaluationCriteriaEntities")
-    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+    @ManyToMany(mappedBy = "evaluationCriterias")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 
 
 

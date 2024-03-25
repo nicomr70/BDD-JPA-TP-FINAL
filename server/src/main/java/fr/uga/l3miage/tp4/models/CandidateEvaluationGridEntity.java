@@ -11,9 +11,11 @@ public class CandidateEvaluationGridEntity {
     private double grade;
     private LocalDateTime submissionDate;
     @ManyToMany
-    private Set<EvaluationCriteriaEntity>evaluationCriteriaEntities;
-    @OneToMany
-    private Set<ExaminerEntity> examiner;
+    private Set<EvaluationCriteriaEntity>evaluationCriterias;
+    @ManyToOne
+    private ExaminerEntity examiner;
     @ManyToOne
     private CandidateEntity candidate;
+    @ManyToOne
+    private ExamEntity exam;
 }

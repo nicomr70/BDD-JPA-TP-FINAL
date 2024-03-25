@@ -2,6 +2,7 @@ package fr.uga.l3miage.tp4.models;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 public class ExamEntity {
@@ -12,4 +13,11 @@ public class ExamEntity {
     @Column(unique = true)
     private String name;
     private int weight;
+
+    @OneToMany(mappedBy = "exam")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
+    @ManyToMany(mappedBy = "exams")
+    private Set<SkillEntity> skills;
+    @ManyToOne
+    private EcosSessionEntity ecosSession;
 }
