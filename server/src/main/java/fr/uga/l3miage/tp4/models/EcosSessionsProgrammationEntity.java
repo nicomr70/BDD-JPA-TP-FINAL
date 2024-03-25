@@ -17,7 +17,4 @@ public class EcosSessionsProgrammationEntity {
 
     @OneToMany
     private Set<EcosSessionProgrammationStepEntity> ecosSessionProgrammationStepEntities;
-
-    @OneToOne(mappedBy = "programmation")
-    private EcosSessionEntity ecosSessionEntity;
 }
