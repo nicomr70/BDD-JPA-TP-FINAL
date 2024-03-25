@@ -5,5 +5,6 @@ public enum TestCenterCode {
     DIJ,
     NCE,
     TOU,
-    PAR
+    PAR,
+    TESTT
 }
