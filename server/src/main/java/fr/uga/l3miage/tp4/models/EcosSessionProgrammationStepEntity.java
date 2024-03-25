@@ -21,4 +21,7 @@ public class EcosSessionProgrammationStepEntity {
 
     @Column(nullable = false)
     private String description;
+
+    @ManyToOne
+    private EcosSessionsProgrammationEntity ecosSessionsProgrammationEntity;
 }

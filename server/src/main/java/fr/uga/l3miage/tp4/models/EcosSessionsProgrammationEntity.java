@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Setter
@@ -13,4 +14,10 @@ public class EcosSessionsProgrammationEntity {
     private Long id;
 
     private String label;
+
+    @OneToMany
+    private Set<EcosSessionProgrammationStepEntity> ecosSessionProgrammationStepEntities;
+
+    @OneToOne(mappedBy = "programmation")
+    private EcosSessionEntity ecosSessionEntity;
 }

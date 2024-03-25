@@ -21,4 +21,9 @@ public class ExamEntity {
     private String name;
 
     private int weight;
+
+    @ManyToOne
+    private EcosSessionEntity ecosSessionEntity;
+
+
 }
