@@ -3,6 +3,7 @@ package fr.uga.l3miage.tp4.models;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @DiscriminatorValue("C") // C pour Candidate
@@ -10,8 +11,11 @@ public class CandidateEntity extends  UserEntity{
 
     private LocalDate birthDate;
 
-    private boolean HasExtraTime;
+    private boolean hasExtraTime;
 
-    @ManyToOne()
+    @ManyToOne // estRattachéA
     private TestCenterEntity testCenter;
+
+    @OneToMany(mappedBy = "candidateEntity")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }

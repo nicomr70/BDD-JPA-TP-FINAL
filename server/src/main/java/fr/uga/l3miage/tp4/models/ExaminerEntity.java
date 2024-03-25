@@ -1,6 +1,7 @@
 package fr.uga.l3miage.tp4.models;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @DiscriminatorValue("E")
@@ -12,6 +13,10 @@ public class ExaminerEntity extends  UserEntity {
 
     @ManyToOne
     private TestCenterEntity testCenter;
+
+    @OneToMany
+    @JoinColumn(name="id_examiner", referencedColumnName = "id")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 
 
 }

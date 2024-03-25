@@ -2,6 +2,7 @@ package fr.uga.l3miage.tp4.models;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 public class CandidateEvaluationGridEntity {
@@ -13,8 +14,12 @@ public class CandidateEvaluationGridEntity {
     private LocalDateTime submissionDate;
 
     @ManyToOne
-    private EvaluationCriteriaEntity evaluationCriteriaEntity;
+    private CandidateEntity candidateEntity;
+
+    @ManyToMany
+    private Set<EvaluationCriteriaEntity> evaluationCriteriaEntities;
 
     @ManyToOne
     private ExamEntity exam;
+
 }
