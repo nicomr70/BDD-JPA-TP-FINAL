@@ -1,10 +1,34 @@
 package fr.uga.l3miage.tp4.models;
 
 import javax.persistence.Entity;
-import java.time.LocalDate;
+//import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.Set;
+
+
+import java.time.LocalDateTime;
 
 @Entity
-public class CandidateEvaluationGridEntity extends UserEntity {
-    private LocalDate birthDate;
-    private boolean hasExtraTime;
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+public class CandidateEvaluationGridEntity{
+    private long sheetNumber;
+    private double grade;
+    private LocalDateTime submissTime;
+
+    @ManyToOne
+    private Set<CandidateEntity> candidateEntities;
+
+    @ManyToOne
+    private Set<ExamEntity> examEntities;
 }
