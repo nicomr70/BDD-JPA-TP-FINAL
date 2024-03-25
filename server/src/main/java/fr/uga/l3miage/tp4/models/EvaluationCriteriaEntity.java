@@ -12,5 +12,5 @@ public class EvaluationCriteriaEntity {
     private  String description;
     private  boolean hasCandidatePerformedCriteria;
     @ManyToMany
-    private Set<CandidateEntity> candidates;
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }

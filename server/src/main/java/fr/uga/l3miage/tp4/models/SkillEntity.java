@@ -1,10 +1,8 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class SkillEntity {
@@ -14,6 +12,7 @@ public class SkillEntity {
 
     @Column(unique = true)
     private String name;
-
+@ManyToMany (mappedBy ="skills")
+    private Set<ExamEntity> exams;
 
 }

@@ -4,7 +4,7 @@ import fr.uga.l3miage.tp4.enums.SessionStatus;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List; // Import List from java.util
+import java.util.Set;
 
 @Entity
 public class EcosSessionEntity {
@@ -16,7 +16,7 @@ public class EcosSessionEntity {
     private LocalDateTime endDate;
     private SessionStatus status;
     @OneToMany(mappedBy = "ecosSessionEntity")
-    private List<ExamEntity> exams;
+    private Set<ExamEntity> exams;
     @OneToOne
-    private EcosSessionProgrammationEntity sessionProgrammation;
+    private EcosSessionProgrammationEntity EcosSessionProgrammation;
 }

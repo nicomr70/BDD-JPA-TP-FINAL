@@ -18,6 +18,8 @@ public class CandidateEvaluationGridEntity {
     @ManyToOne
     private CandidateEntity candidate;
     @ManyToOne
-    private ExamEntity examEntity;
+    private ExaminerEntity examinerEntity;
+    @ManyToMany (mappedBy = "candidateEvaluationGridEntities")
+    private Set<EvaluationCriteriaEntity> evaluationCriteriaEntities;
 
 }
