@@ -1,10 +1,10 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@MappedSuperclass
 @Entity
+@DiscriminatorColumn(name="userType")
 public  abstract class UserEntity {
     @Id
     private Long id;
