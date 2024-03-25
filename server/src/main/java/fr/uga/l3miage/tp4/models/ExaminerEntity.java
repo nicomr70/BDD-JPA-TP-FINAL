@@ -16,5 +16,5 @@ public class ExaminerEntity extends UserEntity{
     private TestCenterEntity testCenterEntity;
 
     @OneToMany
-    private Set<CandidateEvaluationGridEntity> candiateEvaluationGridEntities;
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }
