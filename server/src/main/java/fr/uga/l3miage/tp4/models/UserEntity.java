@@ -1,5 +1,21 @@
 package fr.uga.l3miage.tp4.models;
 
-public class UserEntity {
-    // Todo ...
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public  abstract class UserEntity {
+    @Id
+    private Long id;
+
+    private String firstname;
+
+    private String lastname;
+
+    @Column(unique = true, nullable = false)
+    private String email;
+
+    @Column(unique = true)
+    private String phoneNumber;
 }
