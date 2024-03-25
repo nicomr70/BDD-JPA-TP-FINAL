@@ -13,9 +13,9 @@ public class CandidateEntity extends  UserEntity{
 
     private boolean hasExtraTime;
 
-    //@ManyToOne // estRattachéA
-    //private TestCenterEntity testCenter;
+    @ManyToOne // estRattachéA
+    private TestCenterEntity testCenter;
 
-    //@OneToMany(mappedBy = "candidateEntity")
-    //private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+    @OneToMany(mappedBy = "candidateEntity")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }

@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Entity
 public class EcosSessionProgrammationStepEntity {
+
 	@Id
 	private Long id;
 
@@ -18,7 +19,7 @@ public class EcosSessionProgrammationStepEntity {
 	@Column(nullable = false)
 	private String description;
 
-//	@ManyToOne
-//	private EcosSessionProgrammationEntity programmation;
+	@ManyToOne
+	private EcosSessionProgrammationEntity programmation;
 
 }

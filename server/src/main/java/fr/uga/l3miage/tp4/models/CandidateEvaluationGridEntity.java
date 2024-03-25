@@ -6,6 +6,7 @@ import java.util.Set;
 
 @Entity
 public class CandidateEvaluationGridEntity {
+
     @Id
     private Long sheetNumber;
 
@@ -13,13 +14,13 @@ public class CandidateEvaluationGridEntity {
 
     private LocalDateTime submissionDate;
 
-//    @ManyToOne
-//    private CandidateEntity candidateEntity;
-//
-//    @ManyToMany
-//    private Set<EvaluationCriteriaEntity> evaluationCriteriaEntities;
-//
-//    @ManyToOne
-//    private ExamEntity exam;
+    @ManyToOne
+    private CandidateEntity candidateEntity;
+
+    @ManyToMany
+    private Set<EvaluationCriteriaEntity> evaluationCriteriaEntities;
+
+    @ManyToOne
+    private ExamEntity exam;
 
 }

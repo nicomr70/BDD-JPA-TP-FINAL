@@ -8,6 +8,7 @@ import java.util.Set;
 
 @Entity
 public class ExamEntity {
+
     @Id
     @Column(name="id")
     private Long id;
@@ -21,12 +22,13 @@ public class ExamEntity {
 
     private SessionStatus status;
 
-//    @OneToMany(mappedBy="exam")
-//    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
-//
-//    @ManyToMany(mappedBy = "exams")
-//    private Set<SkillEntity> skills;
-//
-//    @ManyToOne
-//    private EcosSessionEntity ecosSessionEntity;
+    @OneToMany(mappedBy="exam")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
+
+    @ManyToMany(mappedBy = "exams")
+    private Set<SkillEntity> skills;
+
+    @ManyToOne
+    private EcosSessionEntity ecosSessionEntity;
+
 }

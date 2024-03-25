@@ -5,6 +5,7 @@ import java.util.Set;
 
 @Entity
 public class EvaluationCriteriaEntity {
+
     @Id
     private Long id;
 
@@ -13,7 +14,6 @@ public class EvaluationCriteriaEntity {
 
     private boolean hasCandidatePerformedCriteria;
 
-//    @ManyToMany(mappedBy = "evaluationCriteriaEntities")
-//
-//    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+    @ManyToMany(mappedBy = "evaluationCriteriaEntities")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }

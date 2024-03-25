@@ -5,6 +5,7 @@ import java.util.Set;
 
 @Entity
 public class ExaminerEntity extends  UserEntity {
+
     @Column(length = 6)
     private String login;
 
@@ -13,9 +14,9 @@ public class ExaminerEntity extends  UserEntity {
     @ManyToOne
     private TestCenterEntity testCenter;
 
-//    @OneToMany
-//    @JoinColumn(name="id_examiner", referencedColumnName = "id")
-//    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+    @OneToMany
+    @JoinColumn(name="id_examiner", referencedColumnName = "id")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 
 
 }
