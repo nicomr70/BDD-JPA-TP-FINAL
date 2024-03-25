@@ -9,14 +9,17 @@ import java.util.Set;
 public class ExamEntity {
     @Id
     private long id;
-    @Column(name="start_date") private LocalDateTime startDate;
-    @Column(name="end_date") private LocalDateTime endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     @Column(unique = true) private String name;
 
     @ManyToOne()
     private EcosSessionEntity ecosSessionEntity;
 
-    @ManyToMany()
+    @ManyToMany(mappedBy = "examEntities")
     private Set<SkillEntity> skillEntities;
+
+    @OneToMany(mappedBy = "examEntity")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 
 }

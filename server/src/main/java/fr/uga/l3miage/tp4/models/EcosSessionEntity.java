@@ -14,8 +14,8 @@ public class EcosSessionEntity {
     @Id
     private long id;
     @Column(unique = true) private String name;
-    @Column(name="start_date") private LocalDateTime startDate;
-    @Column(name="end_date") private LocalDateTime endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     private SessionStatus status;
 
     @OneToMany(mappedBy="ecosSessionEntity")
