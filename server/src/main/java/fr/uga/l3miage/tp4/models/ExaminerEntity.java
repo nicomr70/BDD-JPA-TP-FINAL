@@ -13,7 +13,7 @@ public class ExaminerEntity extends UserEntity{
     private TestCenterEntity testCenter;
 
     @OneToMany
-    @JoinColumn(name = "evaluationGrid_id", referencedColumnName = "sheetNumber")
+    @JoinColumn(name = "examiner_id")
     private Set<CandidateEvaluationGridEntity> evaluationGrids;
 
 
