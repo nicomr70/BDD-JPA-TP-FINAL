@@ -3,11 +3,11 @@ package fr.uga.l3miage.tp4.components;
 import fr.uga.l3miage.tp4.models.CandidateEntity;
 import fr.uga.l3miage.tp4.repositories.CandidateRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -15,7 +15,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CandidateComponent {
 
-    private CandidateRepository candidateRepository;
+
+    private final CandidateRepository candidateRepository;
 
     /*  Cette méthode est implémentée dans le component au lieu d'utiliser le principe d'interpollation de nom de fonction
    car JPA  ne peut pas filtrer le Set de CandidatEvaluationGrid sur l'attribut grade de l'entité car la relation entre CandidateEntity et CandidateEvaluationGridEntity est @OneToMany (bidirectionnelle)
