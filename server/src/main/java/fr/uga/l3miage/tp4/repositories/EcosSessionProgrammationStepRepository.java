@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EcosSessionProgrammationStepRepository extends JpaRepository<EcosSessionProgrammationStepEntity,Long> {
+    EcosSessionProgrammationStepEntity findFirstByOrderByDateTimeDesc();
 }
