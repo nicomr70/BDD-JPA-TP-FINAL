@@ -21,8 +21,6 @@ public class CandidateEvaluationGridEntity {
     @ManyToOne
     private CandidateEntity candidate;
 
-    @ManyToMany(mappedBy = "candidateEvaluationGrids")
-    private Set<EvaluationCriteriaEntity> evaluationCriteriaEntitySet;
 
     @ManyToOne
     private  ExamEntity exam;
