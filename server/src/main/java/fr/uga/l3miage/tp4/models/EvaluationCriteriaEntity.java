@@ -21,8 +21,7 @@ public class EvaluationCriteriaEntity {
 
     @ManyToMany
     @JoinColumn(
-            name = "sheet_id"
-    )
+            name = "sheet_id")
     private Set<CandidateEntity> candidateComponents;
 
 }
