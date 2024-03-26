@@ -14,9 +14,9 @@ import java.util.Set;
 public class TestCenterComponent {
     private TestCenterRepository testCenterRepository;
 
-    public Set<TestCenterEntity> getAllTestCenterByCode(TestCenterCode code){
-        Set<TestCenterEntity> tests = testCenterRepository.findAllByCode(code);
-        return tests.forEach((val)=>val.get);
+    public Set<CandidateEntity> getAllCandidateFromGRE(){
+        TestCenterEntity test = testCenterRepository.findByCode(TestCenterCode.GRE);
+        return test.getCandidateEntitySet();
     }
 
 }

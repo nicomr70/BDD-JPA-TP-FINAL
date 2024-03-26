@@ -22,4 +22,8 @@ public class CandidateEvaluationGridEntity {
 
     @ManyToMany(mappedBy = "candidateEvaluationGridEntity")
     private Set<EvaluationCriteriaEntity> evaluationCriteriaEntity;
+
+    public double getGrade() {
+        return this.grade;
+    }
 }

@@ -14,5 +14,5 @@ import java.util.Set;
 public interface TestCenterRepository extends JpaRepository<TestCenterEntity,String> {
 
 
-    Set<TestCenterEntity> findAllByCode(TestCenterCode code);
+    TestCenterEntity findByCode(TestCenterCode testCenterCode);
 }

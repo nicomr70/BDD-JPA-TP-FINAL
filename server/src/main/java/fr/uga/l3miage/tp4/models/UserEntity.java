@@ -1,9 +1,11 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.Getter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+@Getter
 @Entity
 public abstract class UserEntity {
     @Id

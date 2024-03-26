@@ -11,7 +11,6 @@ import java.util.Set;
 
 @Entity
 @Data
-@Getter
 public class TestCenterEntity {
     @Id
     private long id;
