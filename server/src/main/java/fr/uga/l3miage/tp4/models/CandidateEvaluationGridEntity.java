@@ -12,7 +12,7 @@ public class CandidateEvaluationGridEntity {
 
     @Column(precision = 2)
     private Double grade;
-    private LocalDateTime submission_date;
+    private LocalDateTime submissionDate;
     @ManyToMany
     @JoinColumn(name = "evaluation_criteria",referencedColumnName = "id")
     private Set<EvaluationCriteriaEntity> evaluationCriteriaEntities;

@@ -18,8 +18,8 @@ public class TestCenterEntity {
     private String city;
 
     @OneToMany(mappedBy = "testCenter")
-    private Set<UserEntity> candidates;
+    private Set<CandidateEntity> candidates;
 
     @OneToMany(mappedBy = "testCenter")
-    private Set<UserEntity> examiners;
+    private Set<ExaminerEntity> examiners;
 }
