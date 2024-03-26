@@ -13,6 +13,9 @@ public class EcosSessionProgrammationEntity {
 
     private String label;
 
+    @OneToOne(mappedBy = "sessionProgrammation")
+    private EcosSessionEntity ecosSession;
+
     @OneToMany(mappedBy = "ecosSessionProgrammation")
     private Set<EcosSessionProgrammationStepEntity> sessionProgrammationSteps;
 }
