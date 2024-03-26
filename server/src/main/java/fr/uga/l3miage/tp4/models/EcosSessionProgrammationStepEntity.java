@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 public class EcosSessionProgrammationStepEntity {
     @Id
     private Long id;
-    private final LocalDateTime dateTime = null;
+    private final LocalDateTime dateTime = LocalDateTime.now();
     @Column(unique = true)
     private String code;
     @Column(nullable = false)
