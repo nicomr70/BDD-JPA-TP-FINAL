@@ -9,6 +9,6 @@ import java.util.Set;
 
 @Repository
 public interface CandidateRepository extends JpaRepository<CandidateEntity, Long> {
-    Set<CandidateEntity> findAllByTestCenter_Code_Gre();
+    Set<CandidateEntity> findCandidateEntitiesByTestCenterContains(String code);
     Set<CandidateEntity> findAllByBirthDateBeforeAndHasExtraTimeFalse(LocalDate birthDate);
 }
