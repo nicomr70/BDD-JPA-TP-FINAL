@@ -16,6 +16,31 @@ public class CandidateComponent {
 
     private final CandidateRepository candidateRepository;
 
+    //CRUD
+    public CandidateEntity getCandidate(long id){
+        return candidateRepository.findById(id).orElseThrow();
+
+    }
+
+    public CandidateEntity createCandidate(CandidateEntity candidateEntity){
+        return candidateRepository.save(candidateEntity);
+    }
+
+    public CandidateEntity updateCandidate(long id, CandidateEntity candidateEntity){
+        CandidateEntity candidate = candidateRepository.findById(id).orElseThrow();
+        candidate.setFirtName(candidateEntity.getFirtName());
+        candidate.setLastName(candidateEntity.getLastName());
+        candidate.setEmail(candidateEntity.getEmail());
+        candidate.setPhoneNumber(candidateEntity.getPhoneNumber());
+        candidate.setBirthDate(candidateEntity.getBirthDate());
+        candidate.setHasExtraTime(candidateEntity.isHasExtraTime());
+        return candidateRepository.save(candidate);
+    }
+
+    public void deleteCandidate(long id){
+        candidateRepository.deleteById(id);
+    }
+
     public Set<CandidateEntity> getAllCandidateGRE(){
         //récupérer tous les candidats et filtrer par la suite par code
         TestCenterCode gre = TestCenterCode.GRE;
