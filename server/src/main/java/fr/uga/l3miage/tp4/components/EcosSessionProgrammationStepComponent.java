@@ -12,10 +12,10 @@ import lombok.RequiredArgsConstructor;
 public class EcosSessionProgrammationStepComponent {
     private final EcosSessionProgrammationStepRepository ecosSessionProgrammationStepRepository;
 
-    // Read
-    public EcosSessionProgrammationStepEntity getEcosSessionProgrammationStep(Long id){
-        return ecosSessionProgrammationStepRepository.findById(id).orElseThrow();
+    // Read the last step
+    public EcosSessionProgrammationStepEntity getLastEcosSessionProgrammationStep() {
+        return ecosSessionProgrammationStepRepository.findLastStep();
     }
 
-    
+
 }
