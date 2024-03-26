@@ -10,5 +10,4 @@ public class ExaminerEntity extends UserEntity{
 
     @ManyToOne
     private TestCenterEntity testCenter;
-
 }
