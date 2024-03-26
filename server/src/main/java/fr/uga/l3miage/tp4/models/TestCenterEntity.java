@@ -7,15 +7,15 @@ import java.util.Set;
 public class TestCenterEntity {
     @Id
     private Long id;
-
-    private TestCenterCode code;
+    @Enumerated(EnumType.STRING)
+    private TestCenterCode testCenterCode;
     private String university;
     private String city;
 
-    @OneToMany(mappedBy = "testCenter")
-    private Set<CandidateEntity> candidates;
+    @OneToMany(mappedBy = "testCenterEntity")
+    private Set<CandidateEntity> candidatesEntity;
 
-    @OneToMany(mappedBy = "testCenter")
-    private Set<ExaminerEntity> examiners;
+    @OneToMany(mappedBy = "testCenterEntity")
+    private Set<ExaminerEntity> examinersEntity;
 
 }

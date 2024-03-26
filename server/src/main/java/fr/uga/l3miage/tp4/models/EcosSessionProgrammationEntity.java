@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class EcosSessionProgrammationEntity {
@@ -11,6 +12,6 @@ public class EcosSessionProgrammationEntity {
     private Long id;
     private String label;
 
-    @OneToMany(mappedBy = "sessionProgrammation")
-    private List<EcosSessionProgrammationStepEntity> steps;
+   @OneToMany(mappedBy = "EcosSessionProgrammation")
+    private Set<EcosSessionProgrammationStepEntity> ecosSessionProgrammationStepEntities;
 }

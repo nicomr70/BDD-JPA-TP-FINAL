@@ -14,9 +14,10 @@ public class EcosSessionEntity {
     private String name;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
+    @Enumerated(EnumType.STRING)
     private SessionStatus status;
-    @OneToMany(mappedBy = "ecosSessionEntity")
-    private Set<ExamEntity> exams;
-    @OneToOne
-    private EcosSessionProgrammationEntity EcosSessionProgrammation;
+   @OneToMany(mappedBy = "ecosSessionEntity")
+    private Set<ExamEntity> examsEntity;
+   @OneToOne
+    private EcosSessionProgrammationEntity EcosSessionProgrammationEntity;
 }

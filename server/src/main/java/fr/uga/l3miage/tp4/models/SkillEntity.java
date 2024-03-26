@@ -12,7 +12,7 @@ public class SkillEntity {
 
     @Column(unique = true)
     private String name;
-@ManyToMany (mappedBy ="skills")
-    private Set<ExamEntity> exams;
+@ManyToMany (mappedBy ="skillsEntity")
+    private Set<ExamEntity> examsEntity;
 
 }
