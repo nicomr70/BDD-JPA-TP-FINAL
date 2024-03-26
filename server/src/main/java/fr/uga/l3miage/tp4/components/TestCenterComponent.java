@@ -17,7 +17,7 @@ public class TestCenterComponent {
 
     // Récupérer la liste des candidats du TestCenter ayant le code testCenterCode = 'GRE'
     public Set<CandidateEntity> getCandidatesByTestCenterCode(String testCenterCode) {
-        TestCenterEntity testCenter = testCenterRepository.findByCode(testCenterCode);
+        TestCenterEntity testCenter = testCenterRepository.findByCode(testCenterCode); // besoin de faire testCenterCode = "GRE"
         if (testCenter != null) {
             return testCenter.getCandidates();
         }
