@@ -15,9 +15,9 @@ public class CandidateComponent {
 
     private final CandidateRepository candidateRepository;
 
-    public Set<CandidateEntity> getAllEliminatedCandidate(){
+    /*public Set<CandidateEntity> getAllEliminatedCandidate(){
         return candidateRepository.findAllByGradeLessThanEqual(5.0);
-    }
+    }*/
 
     // c'est pas demandé explicitement
     public Set<CandidateEntity> getAllCandidatesWithCodeGRE(){
