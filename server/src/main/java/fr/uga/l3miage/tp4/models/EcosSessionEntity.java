@@ -2,10 +2,9 @@ package fr.uga.l3miage.tp4.models;
 
 import fr.uga.l3miage.tp4.enums.SessionStatusType;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 public class EcosSessionEntity {
@@ -20,4 +19,15 @@ public class EcosSessionEntity {
     private LocalDateTime endDate;
 
     private SessionStatusType status;
+
+    @OneToOne   // Relation: EstProgramméPar, relation OneToOne bidirectionnelle entre EcosSessionEntity et EcosSessionProgrammationEntity
+    private EcosSessionProgrammationEntity ecoSessionProgrammation;
+
+    @OneToMany(mappedBy = "ecosSession")
+    private Set<ExamEntity> exams;
+    /* Relation: 'estComposéeDe' bidirectionnlle, tq:
+     * Chaque session 'ecosSession' peut être composée de plusieurs examens.
+     * Chaque examen appartient à une seule session 'ecosSession'.
+     */
 }
+
