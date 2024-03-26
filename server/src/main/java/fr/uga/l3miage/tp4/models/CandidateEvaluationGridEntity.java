@@ -3,6 +3,7 @@ package fr.uga.l3miage.tp4.models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -15,5 +16,8 @@ public class CandidateEvaluationGridEntity {
     private LocalDateTime submissionDate;
 
     @ManyToMany(mappedBy = "EvaluationGrids")
-    private Set<EvaluationCriteriaEntity> Criterias;
+    private Set<EvaluationCriteriaEntity> criterias;
+
+    @ManyToOne
+    private CandidateEntity candidate;
 }

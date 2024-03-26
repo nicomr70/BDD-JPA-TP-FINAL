@@ -3,10 +3,11 @@ package fr.uga.l3miage.tp4.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Entity
-public class EcosSessionProgrammationSeptEntity {
+public class EcosSessionProgrammationStepEntity {
 
     @Id
     private Long id;
@@ -20,4 +21,7 @@ public class EcosSessionProgrammationSeptEntity {
 
     @Column(nullable = false)
     private String description;
+
+    @ManyToOne
+    private EcosSessionProgrammationEntity ecosSessionProgrammation;
 }
