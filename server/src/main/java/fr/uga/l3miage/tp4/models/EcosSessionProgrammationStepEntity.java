@@ -23,5 +23,5 @@ public class EcosSessionProgrammationStepEntity {
     private String description;
 
     @ManyToOne
-    private EcosSessionsProgrammationEntity ecosSessionsProgrammationEntity;
+    private EcosSessionProgrammationEntity ecosSessionProgrammationEntity;
 }

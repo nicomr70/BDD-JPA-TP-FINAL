@@ -3,6 +3,7 @@ package fr.uga.l3miage.tp4.models;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 
@@ -10,6 +11,7 @@ import javax.persistence.OneToOne;
 @Setter
 @Entity
 public class ExaminerEntity extends UserEntity{
+    @Column(length = 6)
     private String login;
     private String password;
 

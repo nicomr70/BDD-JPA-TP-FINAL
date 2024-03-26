@@ -26,7 +26,7 @@ public class EcosSessionEntity {
     private SessionStatus status;
 
     @OneToOne
-    private EcosSessionsProgrammationEntity ecosSessionsProgrammationEntity;
+    private EcosSessionProgrammationEntity ecosSessionProgrammationEntity;
 
     @OneToMany
     private Set<ExamEntity> examEntities;

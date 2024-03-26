@@ -9,7 +9,7 @@ import java.util.Set;
 @Entity
 @Setter
 @Getter
-public class EcosSessionsProgrammationEntity {
+public class EcosSessionProgrammationEntity {
     @Id
     private Long id;
 
