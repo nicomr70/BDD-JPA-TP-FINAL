@@ -5,10 +5,12 @@ import fr.uga.l3miage.tp4.enums.TestCenterCode;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 @Repository
 public interface CandidateRepository extends JpaRepository<CandidateEntity,Long> {
     Set<CandidateEntity> findDistinctByCandidateEvaluationGridEntities_GradeLessThanEqual(double grade);
     Set <CandidateEntity> findByTestCenterEntity_TestCenterCode(TestCenterCode code);
+    Set<CandidateEntity>findByHasExtraTimeFalseAndBirthDateAfter(LocalDate date);
 }

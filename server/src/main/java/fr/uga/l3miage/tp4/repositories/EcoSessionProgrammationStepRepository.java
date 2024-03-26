@@ -8,4 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface EcoSessionProgrammationStepRepository extends JpaRepository<EcoSessionProgrammationStepEntity,Long> {
+    EcoSessionProgrammationStepEntity findFirstByDateTimeOrderByDateTimeDesc();
+
 }

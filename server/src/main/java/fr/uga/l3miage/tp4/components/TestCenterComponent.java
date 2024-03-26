@@ -32,7 +32,5 @@ public class TestCenterComponent {
         return testCenterRepository.save(testCenterEntity);
     }
 
-    public Set<CandidateEntity> findCandidatsGrenoble(){
-        return testCenterRepository.findCandidatesByTestCenterCodeEquals(TestCenterCode.GRE);
-    }
+
 }

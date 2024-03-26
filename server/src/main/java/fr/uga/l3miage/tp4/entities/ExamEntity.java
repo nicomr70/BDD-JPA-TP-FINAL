@@ -25,8 +25,7 @@ public class ExamEntity {
     private Set<SkillEntity> skillEntities;
     @ManyToOne
     private EcoSessionEntity ecoSessionEntity;
-    @ManyToOne
-    private TestCenterEntity testCenterEntity;
+
     @OneToMany(mappedBy="examEntity")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }
