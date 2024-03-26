@@ -3,6 +3,8 @@ package fr.uga.l3miage.tp4.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 @Entity
 public class ExaminerEntity extends UserEntity{
@@ -12,4 +14,7 @@ public class ExaminerEntity extends UserEntity{
     private String password;
     @ManyToOne
     private TestCenterEntity testCenter;
+
+    @OneToMany(mappedBy = "examiner")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 }

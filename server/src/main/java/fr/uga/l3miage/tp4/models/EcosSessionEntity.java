@@ -22,8 +22,11 @@ public class EcosSessionEntity {
     private SessionStatus status;
 
 
-    @OneToMany
+    @OneToMany(mappedBy = "ecoSession")
     private Set<ExamEntity> exams;
+
+    @OneToOne
+    private EcosSessionProgrammationEntity ecosSessionProgrammation;
 
 
 }

@@ -2,10 +2,7 @@ package fr.uga.l3miage.tp4.models;
 
 import org.hibernate.internal.util.type.PrimitiveWrapperHelper;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -21,6 +18,13 @@ public class ExamEntity {
     private String name;
     private int weight;
 
+    @ManyToOne
+    private EcosSessionEntity ecosSession;
 
+    @OneToMany(mappedBy = "exam")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
+
+    @ManyToMany
+    private Set<SkillEntity> skills;
 
 }

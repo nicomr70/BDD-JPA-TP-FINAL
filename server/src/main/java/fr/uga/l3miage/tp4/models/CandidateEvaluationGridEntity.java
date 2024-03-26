@@ -15,9 +15,10 @@ public class CandidateEvaluationGridEntity {
     @ManyToOne
     private CandidateEntity candidate;
 
-    @ManyToOne
-    private ExaminerEntity examiner;
     @ManyToMany
-    private Set<EvaluationCriteriaEntity> criteria;
+    private Set<EvaluationCriteriaEntity> evaluationCriterias;
+
+    @ManyToOne
+    private ExamEntity exam;
 
 }

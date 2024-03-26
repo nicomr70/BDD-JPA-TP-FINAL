@@ -14,6 +14,6 @@ public class SkillEntity {
     @Column(unique = true)
     private String name;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "skills")
     private Set<ExamEntity> exams;
 }
