@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Repository
 public interface CandidateRepository extends JpaRepository<CandidateEntity, Long> {
-    Set<CandidateEntity> findAllByGridEntitiesLessGradeThanEqual(Double note);
+    Set<CandidateEntity> findAllByGridEntitiesGradeLessThanEqual(Double note);
     Set<CandidateEntity> findAllByHasExtraTimeFalseAndBirthDateBefore(LocalDateTime date);
 
 }
