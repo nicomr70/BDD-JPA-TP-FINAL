@@ -27,5 +27,5 @@ public class ExamEntity {
     private EcosSessionEntity session;
 
     @OneToMany(mappedBy = "exam")
-    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
+    private Set<CandidateEvaluationGridEntity> CandidateEvaluationGrids;
 }

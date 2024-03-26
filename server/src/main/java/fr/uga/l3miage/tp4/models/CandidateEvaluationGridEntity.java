@@ -20,4 +20,7 @@ public class CandidateEvaluationGridEntity {
 
     @ManyToOne
     private CandidateEntity candidate;
+
+    @ManyToOne
+    private ExamEntity exam;
 }

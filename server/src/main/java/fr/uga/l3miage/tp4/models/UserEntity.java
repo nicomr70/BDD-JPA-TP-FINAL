@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @MappedSuperclass
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class UserEntity {
+public abstract class UserEntity {
 
     @Id
     private Long id;

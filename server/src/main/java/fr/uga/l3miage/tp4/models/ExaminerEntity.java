@@ -12,7 +12,7 @@ public class ExaminerEntity extends UserEntity{
 
     private String password;
 
-    @OneToMany(mappedBy = "examiner")
+    @OneToMany
     private Set<CandidateEvaluationGridEntity> evaluationGrids;
 
     @ManyToOne

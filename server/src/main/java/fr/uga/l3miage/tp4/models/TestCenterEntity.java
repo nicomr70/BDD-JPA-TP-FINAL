@@ -19,7 +19,7 @@ public class TestCenterEntity {
     private String city;
 
 
-    @OneToMany(mappedBy = "testCenter")
+    @OneToMany(mappedBy = "testcenter")
     private Set<CandidateEntity> candidates;
 
     @OneToMany(mappedBy = "testCenter")

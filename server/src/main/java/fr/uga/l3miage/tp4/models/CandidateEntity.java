@@ -21,5 +21,5 @@ public class CandidateEntity extends UserEntity {
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 
     @ManyToOne
-    private TestCenterEntity testCenter;
+    private TestCenterEntity testcenter;
 }
