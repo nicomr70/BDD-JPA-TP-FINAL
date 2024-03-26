@@ -23,6 +23,6 @@ public class EvaluationCriteriaEntity {
     @JoinColumn(
             name = "sheet_id"
     )
-    private Set<CandidateComponent> candidateComponents;
+    private Set<CandidateEntity> candidateComponents;
 
 }
