@@ -1,5 +1,6 @@
 package fr.uga.l3miage.tp4.components;
 
+import fr.uga.l3miage.tp4.enums.TestCenterCode;
 import fr.uga.l3miage.tp4.models.CandidateEntity;
 import fr.uga.l3miage.tp4.repositories.CandidateRepository;
 import lombok.RequiredArgsConstructor;
@@ -45,5 +46,9 @@ public class CandidateComponent {
     public Set<CandidateEntity> getAllCandidatesWithNoExtraTimeBornBefore_01_01_2001(){
         LocalDate date= LocalDate.of(2000,1,1);
         return candidateRepository.findAllByBirthDateBeforeAndHasExtraTimeFalse(date);
+    }
+
+    public Set<CandidateEntity> findAllByGrenobleTestCenter(){
+        return candidateRepository.findAllByTestCenter_Code(TestCenterCode.GRE);
     }
 }

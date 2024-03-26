@@ -25,7 +25,7 @@ public class ExamEntity {
     @OneToMany(mappedBy = "exam")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     @JoinTable(name="exam_skill",joinColumns ={@JoinColumn(name = "exam_id")},inverseJoinColumns = {@JoinColumn(name = "skill_id")})
 
     private Set<SkillEntity> skills;
