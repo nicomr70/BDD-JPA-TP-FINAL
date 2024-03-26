@@ -14,7 +14,7 @@ public class ExamEntity {
     private String name;
     private Integer weight;
 
-    @OneToMany
+    @OneToMany // Les Grilles d'évaluations d'un candidat
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 
     @ManyToMany(mappedBy = "exam") // La liste des compétences requises pour un exam

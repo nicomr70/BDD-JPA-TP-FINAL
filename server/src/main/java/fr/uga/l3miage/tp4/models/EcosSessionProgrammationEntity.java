@@ -13,6 +13,6 @@ public class EcosSessionProgrammationEntity {
     private  String label;
     @OneToMany(mappedBy = "EcosSessionProgrammation") // La liste des differents étapes d'une EcosSessionProgrammation
     private Set<EcosSessionProgrammationStepEntity> ecosSessionProgrammationSteps;
-    @OneToOne
+    @OneToOne // une ecosSession donné
     private EcosSessionEntity ecosSession;
 }
