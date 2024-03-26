@@ -5,6 +5,8 @@ import fr.uga.l3miage.tp4.repositories.CandidateRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.Set;
+
 @Component
 @RequiredArgsConstructor
 public class CandidateComponent {
@@ -35,10 +37,14 @@ public class CandidateComponent {
     public void deleteCandidate(Long id){
         candidateRepository.deleteById(id);
     }
-    /* TODO à implémenter
+
     public Set<CandidateEntity> getAllEliminatedCandidate(){
-        return null;
+        return candidateRepository.findByEliminatoryScoreLessThanEqualFive();
     }
-    */
+
+    //Récupérer les candidats qui n'ont pas de temps additionnel et qui sont nés avant le 01/01/2000(fonction nommée)
+    public Set<CandidateEntity> getAllCandidateWithoutExtraTimeAndBornBefore2000(){
+        return candidateRepository.findByAdditionalTimeIsNullAndBirthDateBefore("2000-01-01");
+    }
 
 }

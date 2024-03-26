@@ -17,4 +17,7 @@ public class EcosSessionProgrammationEntity {
 
     @OneToMany
     private Set<EcosSessionProgrammationStepEntity> ecosSessionProgrammationStepEntities;
+
+    @OneToOne
+    private EcosSessionEntity ecosSessionEntity;
 }

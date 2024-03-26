@@ -7,6 +7,8 @@ import fr.uga.l3miage.tp4.repositories.ExamRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.Set;
+
 
 @Component
 @RequiredArgsConstructor
@@ -36,10 +38,10 @@ public class ExamComponent {
     public void deleteCandidate(Long id){
         examRepository.deleteById(id);
     }
-    /* TODO à implémenter
+
     public Set<ExamEntity> getAllCardioExam(){
-        return null;
+        return examRepository.findBySkillEntityRelatedToCardio();
     }
-    */
+
 
 }
