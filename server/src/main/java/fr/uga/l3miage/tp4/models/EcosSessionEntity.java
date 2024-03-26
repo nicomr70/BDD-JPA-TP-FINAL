@@ -1,9 +1,10 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
+
+import fr.uga.l3miage.tp4.enums.SessionStatus;
 
 @Entity
 public class EcosSessionEntity {
@@ -14,5 +15,9 @@ public class EcosSessionEntity {
     LocalDateTime startDate;
     LocalDateTime endDate;
     SessionStatus status ;
+    @OneToMany(mappedBy = "ecosSession")
+    private Set<ExamEntity> exams ;
+    @OneToOne
+    private EcosSessionsProgrammationEntity ecosSessionsProgrammation;
 
 }

@@ -1,7 +1,4 @@
-package fr.uga.l3miage.tp4.models;
-
-import javax.persistence.Entity;
-
+package fr.uga.l3miage.tp4.enums;
 
 
 public enum TestCenterCode {
