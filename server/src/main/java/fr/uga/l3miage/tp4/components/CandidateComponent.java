@@ -2,6 +2,7 @@ package fr.uga.l3miage.tp4.components;
 
 import lombok.RequiredArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 import org.springframework.stereotype.Component;
@@ -18,6 +19,10 @@ public class CandidateComponent {
 
     public Set<CandidateEntity> getAllEliminatedCandidate(){
         return candidateEvaluationGridRepository.findAllByGradeLessThan(5);
+    }
+
+    public Set<CandidateEntity> getAllCandidatesWithoutExtraTimeAndBornBefore2000(){
+        return candidateRepository.findAllByExtraTimeFalseAndBirthDateBefore(LocalDate.of(2000, 1, 1));
     }
 
 }
