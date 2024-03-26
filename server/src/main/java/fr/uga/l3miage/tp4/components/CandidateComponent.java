@@ -1,14 +1,12 @@
 package fr.uga.l3miage.tp4.components;
 
+import fr.uga.l3miage.tp4.enums.TestCenterCode;
 import fr.uga.l3miage.tp4.models.CandidateEntity;
-import fr.uga.l3miage.tp4.models.EcosSessionProgrammationEntity;
 import fr.uga.l3miage.tp4.repositories.CandidateRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -18,20 +16,25 @@ public class CandidateComponent {
 
     private final CandidateRepository candidateRepository;
 
-
-    public Set<CandidateEntity> getAllGreCandidate() {
-        return candidateRepository.findByTestCenter_Code("GRE");
+    public Set<CandidateEntity> getAllCandidateGRE(){
+        //récupérer tous les candidats et filtrer par la suite par code
+        TestCenterCode gre = TestCenterCode.GRE;
+        return candidateRepository.findAllByTestCenterEntity_Code(gre);
     }
 
-
+    // Récupère tous les candidats éliminés.
     public Set<CandidateEntity> getAllEliminatedCandidate(){
-        return candidateRepository.findAll().stream().filter(this::hasEliminatoryGrade).collect(Collectors.toSet());
+        return candidateRepository.findAll().stream()// Récupère tous les candidats,
+                .filter(candidate -> candidate.getCandidateEvaluationGridEntities().stream()
+                        .anyMatch(grade -> grade.getGrade() <= 5))// filtre ceux ayant une note ≤ 5,
+                .collect(Collectors.toSet()); // retourne le résultat sous forme de Set pour éliminer les doublons
     }
 
-    //Renvoie vrai si le candidat a au moins une note éliminatoire, false sinon.
-    private boolean hasEliminatoryGrade(CandidateEntity candidate) {
-        return candidate.getCandidateEvaluationGridEntities().stream()
-                .anyMatch(grid -> grid.getGrade() <= 5);
+
+    // Récupère tous les candidats nés avant le 1er janvier 2000 et qui n'ont pas eu de temps additionnel.
+    public Set<CandidateEntity> getCandidatesWithoutAdditionalTimeBefore1stJunuary2000(){
+        LocalDate date = LocalDate.of(2000, 1, 1); // Définit la date limite.
+        return candidateRepository.findAllByHasExtraTimeFalseAndBirthDateBefore(date);// Filtre par date de naissance et absence de temps additionnel.
     }
 
 
