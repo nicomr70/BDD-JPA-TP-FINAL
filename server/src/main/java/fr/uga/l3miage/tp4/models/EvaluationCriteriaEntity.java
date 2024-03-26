@@ -16,7 +16,6 @@ public class EvaluationCriteriaEntity {
     
     private boolean hasCandidatePerformedCriteria;
 
-    // To triple check, I'm tired
     @ManyToMany(mappedBy = "evaluationCriteriaEntities")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }

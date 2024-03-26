@@ -1,6 +1,7 @@
 package fr.uga.l3miage.tp4.models;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -17,6 +18,12 @@ public class ExamEntity {
 
     private int weight;
 
-    // TODO: OneToMany relationship with CandidateEvaluationGridEntity
-    // TODO: ManyToOne relationship with EcosSessionEntity
+    @OneToMany(mappedBy = "examEntity")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+
+    @ManyToOne
+    EcosSessionEntity ecosSessionEntity;
+
+    @ManyToMany
+    Set<SkillEntity> skillEntities;
 }
