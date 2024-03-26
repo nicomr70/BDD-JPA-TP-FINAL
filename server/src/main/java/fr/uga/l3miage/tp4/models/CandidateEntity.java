@@ -6,8 +6,6 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-
-
 @Setter
 @Getter
 @Builder
