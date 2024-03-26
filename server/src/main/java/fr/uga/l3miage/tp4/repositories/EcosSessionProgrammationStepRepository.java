@@ -7,5 +7,6 @@ import fr.uga.l3miage.tp4.models.EcosSessionProgrammationStepEntity;
 
 @Repository
 public interface EcosSessionProgrammationStepRepository extends JpaRepository<EcosSessionProgrammationStepEntity, Long>{
-    
+    // Récupérer la dernière étape de la programmation
+    public EcosSessionProgrammationStepEntity findLastStep();
 }

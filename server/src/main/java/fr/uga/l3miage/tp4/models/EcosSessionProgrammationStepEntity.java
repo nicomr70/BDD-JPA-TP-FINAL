@@ -4,8 +4,14 @@ import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
-import fr.uga.l3miage.tp4.enums.TestCenterCode;
+import lombok.*;
 
+@Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class EcosSessionProgrammationStepEntity {
     // Au secours les noms ;-;
 
