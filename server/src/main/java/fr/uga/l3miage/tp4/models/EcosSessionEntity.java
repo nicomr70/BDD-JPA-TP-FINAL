@@ -14,6 +14,7 @@ public class EcosSessionEntity {
     private String name;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
+    @Enumerated(EnumType.STRING)
     private SessionStatus status;
 
     @OneToMany(mappedBy = "ecosSession")
