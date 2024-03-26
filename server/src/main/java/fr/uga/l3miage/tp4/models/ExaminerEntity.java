@@ -1,14 +1,19 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import lombok.*;
+
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class ExaminerEntity extends UserEntity{
 
+    @Column(length = 6)
     private String login;
     private String password;
 

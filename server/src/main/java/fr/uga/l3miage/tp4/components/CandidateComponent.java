@@ -41,7 +41,7 @@ public class CandidateComponent {
 
 
     public Set<CandidateEntity> getAllEliminatedCandidate(){
-        return null;
+        return candidateRepository.findByCandidateEvaluationGridEntitiesGradeLessThanEqual(5);
     }
 
 

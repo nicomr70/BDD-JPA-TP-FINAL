@@ -1,14 +1,21 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class SkillEntity {
 
     @Id
-    private long id;
+    private Long id;
 
 
     @Column(unique = true)

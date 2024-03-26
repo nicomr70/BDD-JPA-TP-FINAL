@@ -1,17 +1,22 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import lombok.*;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class CandidateEvaluationGridEntity {
     @Id
-    private long sheetNumber;
+    private Long sheetNumber;
 
+    @Column(scale = 2)
     private double grade;
 
     private LocalDateTime submissionDate;
@@ -21,4 +26,7 @@ public class CandidateEvaluationGridEntity {
 
     @ManyToOne
     private ExamEntity examEntity;
+
+    @ManyToOne
+    private CandidateEntity candidateEntity;
 }

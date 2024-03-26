@@ -17,7 +17,7 @@ public abstract class UserEntity {
     private String lastname;
     @Column(unique = true,nullable = false)
     private String email;
-    @Column(unique = true)
+    @Column(unique = true, length = 8)
     private String phoneNumber;
 
 }
