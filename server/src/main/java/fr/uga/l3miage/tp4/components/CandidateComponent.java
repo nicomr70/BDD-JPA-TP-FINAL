@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class CandidateComponent {
 
+
+
     /* TODO à implémenter
     public Set<CandidateEntity> getAllEliminatedCandidate(){
         return null;
