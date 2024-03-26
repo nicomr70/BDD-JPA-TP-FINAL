@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EcosSessionProgrammationRepository extends JpaRepository<EcosSessionProgrammationEntity, Long> {
-    //Récupérer la dernière étape de la programmation qui devra être réalisée (fonction nommée)
-    // On a pas besoin de Optional car il y a au moins une étape
-    EcoSessionProgrammationStepEntity findTopByOrderByDateTimeDesc();
 }
