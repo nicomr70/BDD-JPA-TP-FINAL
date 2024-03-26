@@ -2,10 +2,7 @@ package fr.uga.l3miage.tp4.models;
 
 import fr.uga.l3miage.tp4.enumeration.TestCenterCode;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -17,14 +14,10 @@ public class TestCenterEntity {
 
     private String city;
 
-    @OneToMany
-    @JoinColumn(name = "estRattachA")
-    @JoinColumn(name = "aPourCandidats")
+    @OneToMany(mappedBy = "testCenterEntity", cascade = CascadeType.ALL)
     private Set<CandidateEntity> CandidateEntities;
 
-    @OneToMany
-    @JoinColumn(name = "estRattachA")
-    @JoinColumn(name = "aPourCandidats")
+    @OneToMany(mappedBy = "testCenterEntity",cascade = CascadeType.ALL)
     private Set<ExaminerEntity> ExaminerEntities;
 
 }
