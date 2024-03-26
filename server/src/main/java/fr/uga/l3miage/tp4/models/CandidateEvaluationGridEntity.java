@@ -1,5 +1,7 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -8,6 +10,11 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class CandidateEvaluationGridEntity {
     @Id
     private Long sheetNumber;

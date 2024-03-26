@@ -1,9 +1,16 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class EcosSessionProgrammationEntity {
     @Id
     private Long id;
@@ -32,4 +39,6 @@ public class EcosSessionProgrammationEntity {
      * Chaque programmation de session 'ecosSessionProgrammation' peut avoir plusieurs étapes.
      * Chaque étape appartient à une seule programmation de session 'ecosSessionProgrammation'.
      */
+
+
 }

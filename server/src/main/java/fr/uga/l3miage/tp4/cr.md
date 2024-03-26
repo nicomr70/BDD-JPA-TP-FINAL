@@ -1,4 +1,5 @@
 # Binôme: HADDAD Rayane, TIDJANI Manyl
+# dépôt git: https://github.com/l3miage-tidjanma/BDD-JPA-TP-FINAL
 # #####################################
 
 # Questions à se poser à chaque implémentation:
@@ -28,3 +29,7 @@ Cela pourrait être pertinent si vous voulez rendre EcosSessionEntity responsabl
 @OneToMany(mappedBy = "ecosSessionProgrammation", cascade = CascadeType.ALL)
 Utile le cascade ? -> cela signifie que lorsque j'effectuerai une opération de persistence sur une EcosSessionProgrammationEntity, par exemple une telle opération dans la BD, les changements seront également appliqués à toutes les étapes associées à cette programmation de session 'ecosSession'
 -------------------------------------------------------------------------------
+
+##  Pour les requetes:
+Faut-il créer un component en plus ?
+->

@@ -1,5 +1,7 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -7,6 +9,11 @@ import java.util.Locale;
 import java.util.Set;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class ExamEntity {
     @Id
     private Long id;
