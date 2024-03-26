@@ -10,6 +10,6 @@ import java.util.Set;
 
 @Repository
 public interface CandidateRepository extends JpaRepository<CandidateEntity, Long> {
-    Set<CandidateEntity> findAllByBirthDateBeforeAndHasExtraTimeFalse(LocalDate birthDate);
-    Set<CandidateEntity> findAllByTestcenterCodeGre();
+    Set<CandidateEntity> findAllByBirthDateBeforeAndHasExtraTimeFalse(LocalDate birthDate);//quatrième requête
+    Set<CandidateEntity> findAllByTestcenterCodeGre();//deuxième requête
 }

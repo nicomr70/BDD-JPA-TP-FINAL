@@ -12,7 +12,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 public class CandidateComponent {
 
-
+    //troisième requête
     public Set<CandidateEntity> getAllEliminatedCandidate(CandidateEvaluationGridEntity candidateEval, Double badGrade){
 
         Set<CandidateEntity> eliminatedCandidates = new HashSet<>();
