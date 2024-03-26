@@ -1,3 +1,6 @@
+# Binôme: HADDAD Rayane, TIDJANI Manyl
+# #####################################
+
 # Questions à se poser à chaque implémentation:
 -------------------------------------------------------------------------------
 - les relations sont-elles unidirectionnelles ou bidirectionnelles ? 

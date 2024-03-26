@@ -33,5 +33,5 @@ public class CandidateEvaluationGridEntity {
      * */
 
     @ManyToOne
-    private CandidateEntity condidate ;
+    private CandidateEntity candidate ;
 }
