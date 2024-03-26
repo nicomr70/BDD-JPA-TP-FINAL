@@ -10,5 +10,5 @@ import java.util.Set;
 
 @Repository
 public interface TestCenterRepository extends JpaRepository<TestCenterEntity,Long> {
-    Set<CandidateEntity> findAllCandidatesByCode(TestCenterCode code);
+    Set<CandidateEntity> findAllCandidatesByCode(TestCenterCode code); //code == GRE
 }
