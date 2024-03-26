@@ -1,10 +1,12 @@
 package fr.uga.l3miage.tp4.components;
 
+import fr.uga.l3miage.tp4.enums.TestCenterCode;
 import fr.uga.l3miage.tp4.models.CandidateEntity;
 import fr.uga.l3miage.tp4.repositories.CandidateRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 @Component
@@ -13,7 +15,7 @@ public class CandidateComponent {
 
     private final CandidateRepository candidateRepository;
 
-    public CandidateEntity getCandidate(Long id){
+    public CandidateEntity getCandidate(long id){
         return candidateRepository.findById(id).orElseThrow();
 
     }
@@ -22,29 +24,37 @@ public class CandidateComponent {
         return candidateRepository.save(candidateEntity);
     }
 
-    public CandidateEntity updateCandidate(Long id, CandidateEntity candidateEntity){
+    public CandidateEntity updateCandidate(long id, CandidateEntity candidateEntity){
         CandidateEntity ancien = candidateRepository.findById(id).orElseThrow();
         ancien.setFirstname(candidateEntity.getFirstname());
         ancien.setLastname(candidateEntity.getLastname());
         ancien.setEmail(candidateEntity.getEmail());
-        ancien.setPhonenumber(candidateEntity.getPhonenumber());
+        ancien.setPhoneNumber(candidateEntity.getPhoneNumber());
         ancien.setBirthDate(candidateEntity.getBirthDate());
         ancien.setHasExtraTime(candidateEntity.isHasExtraTime());
         return candidateRepository.save(ancien);
 
     }
 
-    public void deleteCandidate(Long id){
+    public void deleteCandidate(long id){
         candidateRepository.deleteById(id);
     }
 
+
+    // recupère tous les candidats qui ont au dessus de 5
     public Set<CandidateEntity> getAllEliminatedCandidate(){
-        return candidateRepository.findByEliminatoryScoreLessThanEqualFive();
+        return candidateRepository.findByCandidateEvaluationGridEntitiesGradeLessThanEqual(5);
     }
 
-    //Récupérer les candidats qui n'ont pas de temps additionnel et qui sont nés avant le 01/01/2000(fonction nommée)
-    public Set<CandidateEntity> getAllCandidateWithoutExtraTimeAndBornBefore2000(){
-        return candidateRepository.findByAdditionalTimeIsNullAndBirthDateBefore("2000-01-01");
+    // recupère tous les candidats qui ont le TesterCenterCode GRE
+    public Set<CandidateEntity> getCandidatesByTestCenterCode(){
+        return candidateRepository.findByTestCenterEntityCode(TestCenterCode.GRE);
     }
+
+    // recupere tous les candidats qui sont nées avant 2000
+    public Set<CandidateEntity> getCandidatesWithoutExtraTimeAndBirth(){
+        return candidateRepository.findByHasExtraTimeFalseAndBirthDateBefore(LocalDate.of(2000,1,1));
+    }
+
 
 }

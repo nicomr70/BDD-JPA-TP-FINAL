@@ -5,6 +5,7 @@ import fr.uga.l3miage.tp4.repositories.SkillRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+
 @Component
 @RequiredArgsConstructor
 public class SkillComponent {
@@ -22,5 +23,9 @@ public class SkillComponent {
         SkillEntity ancien = skillRepository.findById(id).orElseThrow();
         ancien.setName(skillEntity.getName());
         return skillRepository.save(ancien);
+    }
+
+    public void deleteSkill(Long id){
+        skillRepository.deleteById(id);
     }
 }

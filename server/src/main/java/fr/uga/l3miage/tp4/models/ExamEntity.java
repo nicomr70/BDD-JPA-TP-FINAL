@@ -1,12 +1,15 @@
 package fr.uga.l3miage.tp4.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 public class ExamEntity {
@@ -22,8 +25,13 @@ public class ExamEntity {
 
     private int weight;
 
+    @OneToMany(mappedBy= "examEntity")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+
+    @ManyToMany
+    private Set<SkillEntity> skillEntities;
+
     @ManyToOne
     private EcosSessionEntity ecosSessionEntity;
-
 
 }

@@ -8,28 +8,31 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class ExaminerComponent {
+
     private final ExaminerRepository examinerRepository;
 
-    public ExaminerEntity getExaminer(Long id) {
+    public ExaminerEntity getEcosSessionProgrammation(Long id){
         return examinerRepository.findById(id).orElseThrow();
+
     }
 
-    public ExaminerEntity createExaminer(ExaminerEntity examiner) {
-        return examinerRepository.save(examiner);
+    public ExaminerEntity createEcosSessionProgrammation(ExaminerEntity examinerEntity){
+        return examinerRepository.save(examinerEntity);
     }
 
-    public ExaminerEntity updateExaminer(Long id, ExaminerEntity examinerEntity) {
+    public ExaminerEntity updateEcosSessionProgrammation(Long id, ExaminerEntity examinerEntity){
         ExaminerEntity ancien = examinerRepository.findById(id).orElseThrow();
         ancien.setFirstname(examinerEntity.getFirstname());
         ancien.setLastname(examinerEntity.getLastname());
         ancien.setEmail(examinerEntity.getEmail());
-        ancien.setPhonenumber(examinerEntity.getPhonenumber());
+        ancien.setPhoneNumber(examinerEntity.getPhoneNumber());
         ancien.setLogin(examinerEntity.getLogin());
         ancien.setPassword(examinerEntity.getPassword());
         return examinerRepository.save(ancien);
     }
 
-    public void deleteExaminer(Long id) {
+    public void deleteEcosSessionProgrammation(Long id){
         examinerRepository.deleteById(id);
     }
+
 }

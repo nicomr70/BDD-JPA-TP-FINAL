@@ -1,7 +1,8 @@
 package fr.uga.l3miage.tp4.components;
 
-
+import fr.uga.l3miage.tp4.models.EvaluationCriteriaEntity;
 import fr.uga.l3miage.tp4.models.TestCenterEntity;
+import fr.uga.l3miage.tp4.repositories.EvaluationCriteriaRepository;
 import fr.uga.l3miage.tp4.repositories.TestCenterRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -32,3 +33,4 @@ public class TestCenterComponent {
         testCenterRepository.deleteById(id);
     }
 }
+

@@ -1,6 +1,5 @@
 package fr.uga.l3miage.tp4.components;
 
-
 import fr.uga.l3miage.tp4.models.EcosSessionProgrammationEntity;
 import fr.uga.l3miage.tp4.repositories.EcosSessionProgrammationRepository;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +27,7 @@ public class EcosSessionProgrammationComponent {
 
     }
 
-    public void deleteEcosSessionProgrammation(long id){
+    public void deleteEcosSessionProgrammation(Long id){
         ecosSessionProgrammationRepository.deleteById(id);
     }
 

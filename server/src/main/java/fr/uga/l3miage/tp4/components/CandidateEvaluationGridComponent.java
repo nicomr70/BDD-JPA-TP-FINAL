@@ -21,10 +21,10 @@ public class CandidateEvaluationGridComponent {
 
     public CandidateEvaluationGridEntity updateCandidateEvaluationGrid(Long id, CandidateEvaluationGridEntity candidateEvaluationGridEntity){
         CandidateEvaluationGridEntity ancien = candidateEvaluationGridRepository.findById(id).orElseThrow();
-        ancien.setGrade(candidateEvaluationGridEntity.getGrade());
         ancien.setSheetNumber(candidateEvaluationGridEntity.getSheetNumber());
+        ancien.setGrade(candidateEvaluationGridEntity.getGrade());
         ancien.setSubmissionDate(candidateEvaluationGridEntity.getSubmissionDate());
-        return ancien;
+        return candidateEvaluationGridRepository.save(ancien);
     }
 
     public void deleteCandidateEvaluationGrid(Long id){

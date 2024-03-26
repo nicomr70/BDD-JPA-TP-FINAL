@@ -23,10 +23,12 @@ public class EcosSessionProgrammationStepComponent {
         ancien.setDateTime(ecosSessionProgrammationStepEntity.getDateTime());
         ancien.setCode(ecosSessionProgrammationStepEntity.getCode());
         ancien.setDescription(ecosSessionProgrammationStepEntity.getDescription());
-        return ancien;
+        return ecosSessionProgrammationStepRepository.save(ancien);
     }
 
     public void deleteEcosSessionProgrammationStep(Long id){
         ecosSessionProgrammationStepRepository.deleteById(id);
     }
+
 }
+

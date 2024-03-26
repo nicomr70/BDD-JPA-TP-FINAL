@@ -1,13 +1,15 @@
 package fr.uga.l3miage.tp4.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 public class CandidateEvaluationGridEntity {
@@ -27,5 +29,4 @@ public class CandidateEvaluationGridEntity {
 
     @ManyToOne
     private CandidateEntity candidateEntity;
-
 }

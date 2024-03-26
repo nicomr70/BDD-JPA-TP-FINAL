@@ -24,7 +24,7 @@ public class EcosSessionComponent {
         ancien.setStartDate(ecosSessionEntity.getStartDate());
         ancien.setEndDate(ecosSessionEntity.getEndDate());
         ancien.setStatus(ecosSessionEntity.getStatus());
-        return ancien;
+        return ecosSessionRepository.save(ancien);
     }
 
     public void deleteEcosSession(Long id){

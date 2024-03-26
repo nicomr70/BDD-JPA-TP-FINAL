@@ -1,15 +1,21 @@
 package fr.uga.l3miage.tp4.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 public class EcosSessionProgrammationStepEntity {
+
     @Id
     private Long id;
 
@@ -23,5 +29,5 @@ public class EcosSessionProgrammationStepEntity {
     private String description;
 
     @ManyToOne
-    private EcosSessionProgrammationEntity ecosSessionProgrammationEntity;
+    private EcosSessionProgrammationEntity ecoSessionProgrammationEntity;
 }
