@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class EvaluationCriteriaEntity {
 
     @Id
-    private long id;
+    private Long id;
     @Column(nullable = false)
     private String description;
     private boolean hasCandidatePerformedCriteria;

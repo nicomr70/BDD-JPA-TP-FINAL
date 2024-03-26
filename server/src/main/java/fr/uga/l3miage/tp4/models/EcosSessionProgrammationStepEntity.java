@@ -10,8 +10,9 @@ import java.time.LocalDateTime;
 @Entity
 public class EcosSessionProgrammationStepEntity {
     @Id
-    private long id;
+    private Long id;
     //FINAL OLMASI LAZIMMMM
+    @Column(updatable = false)
     private LocalDateTime dateTime;
     @Column(unique = true)
     private String code;

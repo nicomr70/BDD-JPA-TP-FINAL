@@ -7,7 +7,7 @@ import javax.persistence.*;
 public abstract class UserEntity {
 
     @Id
-    private long id;
+    private Long id;
 
     private String firstname;
 

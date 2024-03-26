@@ -2,15 +2,15 @@ package fr.uga.l3miage.tp4.models;
 
 import fr.uga.l3miage.tp4.enums.SessionStatus;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 public class EcosSessionEntity {
     @Id
-    private long id;
+    private Long id;
     @Column(unique = true)
     private String name;
 
@@ -18,5 +18,12 @@ public class EcosSessionEntity {
 
     private  LocalDateTime endDate;
 
+    @Enumerated(EnumType.STRING)
     private SessionStatus status;
+
+
+    @OneToMany
+    private Set<ExamEntity> exams;
+
+
 }

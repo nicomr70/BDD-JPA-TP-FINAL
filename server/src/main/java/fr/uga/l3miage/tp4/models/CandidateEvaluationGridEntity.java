@@ -1,15 +1,23 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 public class CandidateEvaluationGridEntity {
 
     @Id
-    private long sheetNumber;
+    private Long sheetNumber;
     private double grade;
     private LocalDateTime submissionDate;
+
+    @ManyToOne
+    private CandidateEntity candidate;
+
+    @ManyToOne
+    private ExaminerEntity examiner;
+    @ManyToMany
+    private Set<EvaluationCriteriaEntity> criteria;
 
 }
