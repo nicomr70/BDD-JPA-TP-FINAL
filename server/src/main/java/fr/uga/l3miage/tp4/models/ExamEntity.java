@@ -25,4 +25,7 @@ public class ExamEntity {
     @ManyToMany // On suit la logique (le sens et pas la flèche dans la déclaration du ManyToMany unidirectionnel
     private Set<SkillEntity> evaluatedSkills;
 
+    @ManyToOne
+    private EcosSessionEntity ecosSession;
+
 }
