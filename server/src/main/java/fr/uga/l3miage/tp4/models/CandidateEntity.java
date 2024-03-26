@@ -1,4 +1,4 @@
-package fr.uga.l3miage.tp4.modules;
+package fr.uga.l3miage.tp4.models;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -8,17 +8,14 @@ import java.util.Set;
 public class CandidateEntity extends UserEntity{
 
 
-    @Column(name = "birth_date")
     private LocalDate birthDate;
 
 
-    @Column(name = "has_extra_time")
     private boolean hasExtraTime;
 
     @OneToMany(mappedBy = "candidateEntity")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 
     @ManyToOne
-    @JoinColumn(name = "test_center_id")
     private TestCenterEntity testCenterEntity;
 }

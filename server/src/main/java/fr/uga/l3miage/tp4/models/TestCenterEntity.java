@@ -1,4 +1,4 @@
-package fr.uga.l3miage.tp4.modules;
+package fr.uga.l3miage.tp4.models;
 
 
 import fr.uga.l3miage.tp4.enums.TestCenterCode;

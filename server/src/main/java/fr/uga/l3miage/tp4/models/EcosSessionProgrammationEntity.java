@@ -1,9 +1,8 @@
-package fr.uga.l3miage.tp4.modules;
+package fr.uga.l3miage.tp4.models;
 
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import java.util.Set;
 

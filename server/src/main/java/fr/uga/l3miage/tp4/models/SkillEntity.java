@@ -1,4 +1,4 @@
-package fr.uga.l3miage.tp4.modules;
+package fr.uga.l3miage.tp4.models;
 
 
 import javax.persistence.Column;
@@ -11,6 +11,5 @@ public class SkillEntity {
     @Id
     private long id;
 
-    @Column(nullable = false)
     private String name;
 }
