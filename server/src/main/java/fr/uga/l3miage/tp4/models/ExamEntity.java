@@ -1,11 +1,29 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.Set;
+//import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class ExamEntity {
     @Id
     private long id;
@@ -16,9 +34,7 @@ public class ExamEntity {
 
     private int weight;
 
-    @OneToMany(mappedBy = "CandidateEvaluationGridEntity")
-    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntity;
-
+/*
     @OneToMany(mappedBy = "CandidateEvaluationGridEntities")
     private Set<CandidateEvaluationGridEntity> CandidateEvaluationGridEntities;
 
@@ -29,5 +45,14 @@ public class ExamEntity {
             inverseJoinColumns = @JoinColumn(name = "skill_id")
     )
     private Set<SkillEntity> skillEntities;
+*/
+    @OneToMany(mappedBy = "exam")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+
+    @ManyToMany(mappedBy = "exam")
+    private Set<SkillEntity> skillEntities;
+
+    @ManyToOne
+    private Set<EcosSessionEntity> ecosSessionEntities;
 
 }
