@@ -7,7 +7,7 @@ import java.util.Set;
 @Entity
 public class CandidateEvaluationGridEntity {
     @Id
-    private long sheetNumber;
+    private Long sheetNumber;
     private double grade;
     private LocalDateTime submissionDate;
     @ManyToMany

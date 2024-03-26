@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class UserEntity {
     @Id
-    private long id;
+    private Long id;
     private String firstname;
     private String lastname;
     @Column(nullable = false, unique = true)
