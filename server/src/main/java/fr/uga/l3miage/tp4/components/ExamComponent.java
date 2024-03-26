@@ -18,8 +18,8 @@ public class ExamComponent {
     public Set<ExamEntity> getAllCardioExams(){
         return examEntityRepository.findAll().stream()
            
-                .filter(exam -> exam.getSkills().stream()
-                        .anyMatch(skill -> skill.getName().toLowerCase().contains("cardio")))
+                .filter(exam -> exam.getSkillsEntity().stream().anyMatch(skill -> skill.getName().toLowerCase().contains("cardio")))
+
                 .collect(Collectors.toSet());
     }
 

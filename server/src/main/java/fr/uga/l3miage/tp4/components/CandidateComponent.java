@@ -22,7 +22,7 @@ public class CandidateComponent {
     public Set<CandidateEntity> getAllEliminatedCandidates() {
         return candidateEntityRepository.findAll().stream()
                 .filter(candidate -> 
-                        candidate.getEvaluationGrids().stream()
+                        candidate.getCandidateEvaluationGridEntities().stream()
                         .anyMatch(grid -> grid.getGrade() <= 5))
                 .collect(Collectors.toSet());
     }
