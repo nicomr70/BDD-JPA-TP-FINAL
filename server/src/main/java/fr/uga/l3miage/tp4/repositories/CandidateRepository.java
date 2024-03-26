@@ -10,7 +10,6 @@ import java.util.Set;
 
 @Repository
 public interface CandidateRepository extends JpaRepository<CandidateEntity,Long> {
-
     //Récupérer les candidats qui ont eu au moins 1 note éliminatoire (<=5)
     Set<CandidateEntity> findByCandidateEvaluationGridEntitiesGradeLessThanEqual(double grade);
 
@@ -19,6 +18,5 @@ public interface CandidateRepository extends JpaRepository<CandidateEntity,Long>
 
     //Récupérer les candidats qui n'ont pas de temps additionnel et qui sont nés avant le 01/01/2000
     Set<CandidateEntity> findByHasExtraTimeFalseAndBirthDateBefore(LocalDate date);
-
 
 }

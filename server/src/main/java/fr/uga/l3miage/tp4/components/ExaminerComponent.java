@@ -1,6 +1,5 @@
 package fr.uga.l3miage.tp4.components;
 
-import fr.uga.l3miage.tp4.models.EvaluationCriteriaEntity;
 import fr.uga.l3miage.tp4.models.ExaminerEntity;
 import fr.uga.l3miage.tp4.repositories.ExaminerRepository;
 import lombok.RequiredArgsConstructor;

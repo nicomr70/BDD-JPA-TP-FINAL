@@ -1,8 +1,6 @@
 package fr.uga.l3miage.tp4.components;
 
-import fr.uga.l3miage.tp4.models.EcosSessionProgrammationEntity;
 import fr.uga.l3miage.tp4.models.EvaluationCriteriaEntity;
-import fr.uga.l3miage.tp4.repositories.EcosSessionProgrammationRepository;
 import fr.uga.l3miage.tp4.repositories.EvaluationCriteriaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

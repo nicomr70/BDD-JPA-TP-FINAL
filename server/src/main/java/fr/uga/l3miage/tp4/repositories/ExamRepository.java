@@ -10,7 +10,8 @@ import java.util.Set;
 public interface ExamRepository extends JpaRepository<ExamEntity, Long> {
 
     // Récupérer la liste des examens qui évaluent au moins une compétence en lien avec 'cardio' contenu dans le nom.(fonction + ExamComponent)
-    Set<ExamEntity> findBySkillEntitiesAndNameContainingIgnoreCase(String skillName);
+    Set<ExamEntity> findExamEntitiesByNameContaining(String skill);
+
 
 
 }

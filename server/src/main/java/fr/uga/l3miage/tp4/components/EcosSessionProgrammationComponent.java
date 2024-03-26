@@ -1,12 +1,9 @@
 package fr.uga.l3miage.tp4.components;
 
-import fr.uga.l3miage.tp4.models.CandidateEntity;
 import fr.uga.l3miage.tp4.models.EcosSessionProgrammationEntity;
 import fr.uga.l3miage.tp4.repositories.EcosSessionProgrammationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-
-import java.util.Set;
 
 @Component
 @RequiredArgsConstructor

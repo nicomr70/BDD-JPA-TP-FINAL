@@ -37,8 +37,9 @@ public class ExamComponent {
     public void deleteEcosSessionProgrammation(Long id){
         examRepository.deleteById(id);
     }
+
     public Set<ExamEntity> getAllCardioExam(){
-        return examRepository.findDistinctBySkillEntitiesNameContainingIgnoreCase("cardio");
+        return examRepository.findExamEntitiesByNameContaining("cardio");
     }
 
 

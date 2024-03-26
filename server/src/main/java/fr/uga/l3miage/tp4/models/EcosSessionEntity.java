@@ -30,4 +30,7 @@ public class EcosSessionEntity {
     @OneToMany(mappedBy = "ecosSessionEntity")
     private Set<ExamEntity> examEntities;
 
+    //@OneToOne
+    //private EcosSessionProgrammationEntity ecosSessionProgrammationEntity;
+
 }

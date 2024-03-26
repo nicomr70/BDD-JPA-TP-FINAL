@@ -30,8 +30,5 @@ public class EcosSessionProgrammationStepComponent {
         ecosSessionProgrammationStepRepository.deleteById(id);
     }
 
-    public EcosSessionProgrammationStepEntity getLastStepOfProgrammation(){
-        return ecosSessionProgrammationStepRepository.findTopByOrderByDateTimeDesc();
-    }
 }
 

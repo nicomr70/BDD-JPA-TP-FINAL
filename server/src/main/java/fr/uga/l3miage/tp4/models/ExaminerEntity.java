@@ -21,5 +21,6 @@ public class ExaminerEntity extends UserEntity{
     private TestCenterEntity testCenterEntity;
 
     @OneToMany
+    @JoinColumn(name="examiner_id")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }
