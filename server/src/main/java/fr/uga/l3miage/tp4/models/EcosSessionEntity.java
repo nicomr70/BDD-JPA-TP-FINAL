@@ -1,12 +1,14 @@
 package fr.uga.l3miage.tp4.models;
 
 import fr.uga.l3miage.tp4.enums.SessionStatus;
+import lombok.Getter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
+@Getter
 public class EcosSessionEntity {
     @Id
     private Long id;
