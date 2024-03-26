@@ -18,5 +18,5 @@ public class CandidateEntity extends UserEntity {
     private Set<CandidateEvaluationGridEntity> aPourGrillesEvaluations;
 
     @ManyToOne
-    private TestCenterEntity estRattachéA;
+    private TestCenterEntity estRattacheA;
 }
