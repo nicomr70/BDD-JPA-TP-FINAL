@@ -3,6 +3,8 @@ package fr.uga.l3miage.tp4.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import java.util.Set;
 
 @Entity
 public class EvaluationCriteriaEntity {
@@ -13,4 +15,12 @@ public class EvaluationCriteriaEntity {
     String description;
 
     boolean hasCandidatePerformedCriteria;
+
+    @ManyToMany(mappedBy = "evaluationCriteria")
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
+    /*
+     * Relation: bidirectionnelle "évalue" entre EvaluationCriteriaEntity et CandidateEvaluationGridEntity
+     * génère la table d'association 'evaluationCriteria_candidateEvaluationGridEntities', tq:
+     * clé primaire: private Long id (de 'EvaluationCriteriaEntity') et private Long sheetNumber (de 'CandidateEvaluationGridEntity')
+     * */
 }
