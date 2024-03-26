@@ -8,6 +8,4 @@ public interface EcosSessionProgrammationStepRepository extends JpaRepository<Ec
     //R1
     EcosSessionProgrammationStepEntity findFirstByOrderByDateTimeDesc();
 
-
-
 }
