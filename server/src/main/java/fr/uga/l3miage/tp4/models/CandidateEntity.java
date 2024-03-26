@@ -22,4 +22,5 @@ public class CandidateEntity extends UserEntity {
 
     @ManyToOne
     private TestCenterEntity testcenter;
+
 }
