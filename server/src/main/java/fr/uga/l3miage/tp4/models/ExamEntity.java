@@ -34,4 +34,7 @@ public class ExamEntity {
      * Chaque grille d'évaluation du candidat correspond à un examen.
      * Chaque examen peut avoir plusieurs grilles d'évaluation de (ou par) candidat.
      */
+
+    @ManyToMany
+    private Set<SkillEntity> skills ;
 }

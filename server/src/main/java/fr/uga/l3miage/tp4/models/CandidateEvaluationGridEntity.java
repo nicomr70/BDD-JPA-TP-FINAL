@@ -31,4 +31,7 @@ public class CandidateEvaluationGridEntity {
      * génère la table d'association 'evaluationCriteria_candidateEvaluationGridEntities', tq:
      * clé primaire: private Long id (de 'EvaluationCriteriaEntity') et private Long sheetNumber (de 'CandidateEvaluationGridEntity')
      * */
+
+    @ManyToOne
+    private CandidateEntity condidate ;
 }
