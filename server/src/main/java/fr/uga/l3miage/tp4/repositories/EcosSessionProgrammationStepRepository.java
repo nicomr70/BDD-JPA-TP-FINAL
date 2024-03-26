@@ -7,5 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EcosSessionProgrammationStepRepository extends JpaRepository<EcosSessionProgrammationStepEntity, Long> {
+    // Cette méthode récupère la dernière étape de programmation pour une session
+    // de programmation spécifique, triée par date et heure décroissantes
     EcosSessionProgrammationStepEntity findTopByEcosSessionProgrammationEntityOrderByDateTimeDesc(EcosSessionProgrammationEntity session);
 }

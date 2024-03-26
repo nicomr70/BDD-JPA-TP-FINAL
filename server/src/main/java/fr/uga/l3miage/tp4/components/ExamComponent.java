@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 public class ExamComponent {
     private final ExamRepository examRepository;
 
+    // Cette méthode récupère tous les examens de cardiologie
     public Set<ExamEntity> getAllCardioExam(){
-        //récupérer tous les examens et filtrer par la suite
         return examRepository.findAll().stream()
                 .filter(exam -> exam.getSkillEntities().stream().anyMatch(skill->
                         skill.getName().contains("cardio")))
