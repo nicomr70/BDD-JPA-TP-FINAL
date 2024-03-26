@@ -16,8 +16,9 @@ import java.util.Set;
 public class ExamComponent {
     @Autowired
 private  final ExamRepository examRepository;
-    public Set<ExamEntity> getAllCardioExam(String name) {
-        return new HashSet<>(examRepository.findByName(name));
-    }
 
+    public Set<ExamEntity> getAllCardioExam(String skillWord){
+        // 5) Récupérer la liste des examens qui évaluent au moins une compétence en lien avec 'cardio' contenu dans le nom
+        return examRepository.findAllBySkillsContaining("cardio");
+    }
 }
