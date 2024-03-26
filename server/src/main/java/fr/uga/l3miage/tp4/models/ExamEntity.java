@@ -34,22 +34,10 @@ public class ExamEntity {
 
     private int weight;
 
-/*
-    @OneToMany(mappedBy = "CandidateEvaluationGridEntities")
-    private Set<CandidateEvaluationGridEntity> CandidateEvaluationGridEntities;
-
-    @ManyToMany
-    @JoinTable(
-            name = "SkillAEvalue",
-            joinColumns = @JoinColumn(name = "exam_id"),
-            inverseJoinColumns = @JoinColumn(name = "skill_id")
-    )
-    private Set<SkillEntity> skillEntities;
-*/
-    @OneToMany(mappedBy = "exam")
+    @OneToMany(mappedBy = "examEntities")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 
-    @ManyToMany(mappedBy = "exam")
+    @ManyToMany(mappedBy = "examEntities")
     private Set<SkillEntity> skillEntities;
 
     @ManyToOne

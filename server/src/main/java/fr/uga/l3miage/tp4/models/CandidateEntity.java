@@ -22,10 +22,9 @@ public class CandidateEntity extends UserEntity{
     private LocalDate birthDate;
     private boolean hasExtratime;
     @ManyToOne
-    @JoinColumn(name = "testCenterEntity")
     private TestCenterEntity testCenterEntity;
 
-    @OneToMany(mappedBy = "candidateEvaluationGridEntity",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "candidateEvaluationGridEntity")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntity;
 
     @OneToMany(mappedBy = "candidate")

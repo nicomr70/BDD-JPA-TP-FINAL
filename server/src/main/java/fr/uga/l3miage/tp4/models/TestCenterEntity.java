@@ -21,16 +21,17 @@ import java.util.Set;
 public class TestCenterEntity {
     @Id
     private long id;
+    @Enumerated(EnumType.STRING)
     private TestCenterCode code;
     private String university;
 
     private String city;
 
 
-    @OneToMany(mappedBy = "testcenter")
+    @OneToMany(mappedBy = "testCenterEntities")
     private Set<CandidateEntity> CandidateEntities;
 
-    @OneToMany(mappedBy = "testcenter")
+    @OneToMany(mappedBy = "testCenterEntities")
     private Set<ExaminerEntity> examinerEntities;
 
 
