@@ -20,8 +20,5 @@ public class CandidateEvaluationGridEntity {
     private CandidateEntity candidateEntity;
 
     @ManyToOne
-    private ExaminerEntity examinerEntity;
-
-    @ManyToOne
     private ExamEntity examEntity;
 }

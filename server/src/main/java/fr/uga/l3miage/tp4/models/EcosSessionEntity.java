@@ -1,6 +1,7 @@
 package fr.uga.l3miage.tp4.models;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -18,6 +19,6 @@ public class EcosSessionEntity {
     private LocalDateTime endDate;
     private SessionStatus status;
 
-    //TODO OneToMany relationship with ExamEntity
-    //TODO OneToOne relationship with EcosSessionProgrammationEntity
+    @OneToMany(mappedBy = "ecosSessionEntity")
+    private Set<ExamEntity> examEntities;
 }

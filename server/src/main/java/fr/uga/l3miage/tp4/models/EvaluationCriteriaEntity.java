@@ -16,6 +16,6 @@ public class EvaluationCriteriaEntity {
     
     private boolean hasCandidatePerformedCriteria;
 
-    @ManyToMany(mappedBy = "evaluationCriteriaEntities")
+    @ManyToMany
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }

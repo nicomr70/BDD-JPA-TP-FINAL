@@ -12,5 +12,7 @@ public class EcosSessionProgrammationEntity {
     @OneToMany(mappedBy = "ecosSessionProgrammationEntities")
     private EcosSessionProgrammationStepEntity ecosSessionProgrammationStepEntities;
 
+    @OneToOne
+    private EcosSessionEntity ecosSessionEntity;
     
 }
