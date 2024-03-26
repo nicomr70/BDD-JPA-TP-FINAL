@@ -12,7 +12,7 @@ import java.util.Set;
 @Repository
 public interface CandidateRepository extends UserRepository<CandidateEntity>{
 
-
+Set<CandidateEntity> getAllEliminatedCandidate();
 
 
 }

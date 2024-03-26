@@ -1,5 +1,10 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -7,6 +12,10 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
+@Setter
+@Getter
+@NoArgsConstructor
+
 public class CandidateEntity extends  UserEntity {
 private LocalDate birthDate;
 private boolean hasExtraTime;

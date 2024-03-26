@@ -12,12 +12,10 @@ import java.util.Set;
 @RequiredArgsConstructor
 public class CandidateComponent {
 private  final CandidateRepository candidateRepository;
-public Set<CandidateEntity> getCandidateTestCenter(TestCenterCode code){
-    return  candidateRepository.findAllByTestCenter_Code(TestCenterCode.GRE);
-}
+
     /* TODO à implémenter
     public Set<CandidateEntity> getAllEliminatedCandidate(){
-        return null;
+
     }
     */
 
