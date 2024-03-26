@@ -17,9 +17,4 @@ public class CandidateComponent {
         return null;
     }
     */
-    private final CandidateRepository candidateRepository;
-    public Set<CandidateEntity> getCandidatesWithNoExtraTime(LocalDate dateNaissance){
-        return candidateRepository.findAllByHasExtraTimeFalseAndBirthDateBefore(dateNaissance);
-    }
-
 }
