@@ -1,9 +1,18 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class EcosSessionProgrammationStepEntity {
     @Id
     private Long Id;
@@ -14,5 +23,5 @@ public class EcosSessionProgrammationStepEntity {
     @Column(nullable = false)
     private String description;
     @ManyToOne
-    private EcosSessionsProgrammationEntity sessionProgrammation;
+    private EcosSessionProgrammationEntity sessionProgrammation;
 }

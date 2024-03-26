@@ -1,6 +1,7 @@
 package fr.uga.l3miage.tp4.models;
 
 import io.micrometer.core.lang.Nullable;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
