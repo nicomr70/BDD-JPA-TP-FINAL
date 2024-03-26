@@ -1,10 +1,12 @@
 package fr.uga.l3miage.tp4.models;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-//tout en mode createdrop pay attention mona
+@Data
 @Entity
 public class ExamEntity {
     @Id
