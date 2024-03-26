@@ -12,4 +12,5 @@ public interface CandidateRepository extends JpaRepository<CandidateEntity, Long
 
     public Set<CandidateEntity> findAllByBirthDateLessThanAndHasExtraTimeIsTrue(LocalDate date);
 
+
 }
