@@ -12,6 +12,7 @@ import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -41,6 +42,13 @@ public class CandidateComponent {
         }
 
         return candidatesWithDisqualifyingGrades;
+    }
+
+    public Set<CandidateEntity> findCandidatesWithoutExtraTimeBornBefore2000() {
+        // Définissez la date de référence pour le 01/01/2000
+        LocalDate referenceDate = LocalDate.of(2000, 1, 1);
+        // Utilisez la méthode du repository pour récupérer les candidats
+        return candidateRepository.findByHasExtraTimeFalseAndBirthDateBefore(referenceDate);
     }
 
 }
