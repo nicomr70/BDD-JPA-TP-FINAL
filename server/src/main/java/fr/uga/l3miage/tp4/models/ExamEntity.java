@@ -21,7 +21,7 @@ public class ExamEntity {
     private String name;
 
     @OneToMany(mappedBy = "examinerEntity")
-    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntitySet;
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 
     @ManyToMany
     private Set<SkillEntity> skillEntities;

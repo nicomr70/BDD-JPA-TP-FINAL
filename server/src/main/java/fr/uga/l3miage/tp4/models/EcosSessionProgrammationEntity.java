@@ -10,7 +10,7 @@ import java.util.Set;
 public class EcosSessionProgrammationEntity {
 
     @Id
-    private long id;
+    private Long id;
 
     private String label;
 

@@ -11,7 +11,7 @@ import java.util.Set;
 public class EcosSessionEntity {
 
     @Id
-    private long id;
+    private Long id;
 
     private String name;
 

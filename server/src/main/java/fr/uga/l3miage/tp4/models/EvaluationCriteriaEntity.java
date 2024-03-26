@@ -20,6 +20,9 @@ public class EvaluationCriteriaEntity {
     private boolean hasCandidatePerformedCriteria;
 
     @ManyToMany
+    @JoinColumn(
+            name = "sheet_id"
+    )
     private Set<CandidateComponent> candidateComponents;
 
 }

@@ -10,9 +10,6 @@ import javax.persistence.*;
 
 @Component
 @RequiredArgsConstructor
-@Entity
-@Setter
-@Getter
 public class CandidateComponent {
 
 

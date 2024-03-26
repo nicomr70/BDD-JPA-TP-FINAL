@@ -11,5 +11,6 @@ public class SkillEntity {
     @Id
     private long id;
 
+    @Column(unique = true)
     private String name;
 }
