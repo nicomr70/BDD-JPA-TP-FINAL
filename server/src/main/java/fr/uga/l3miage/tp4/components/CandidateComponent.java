@@ -6,6 +6,7 @@ import fr.uga.l3miage.tp4.repositories.CandidateRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Component
@@ -18,5 +19,10 @@ private  final CandidateRepository candidateRepository;
 
     }
     */
+
+    public Set<CandidateEntity> getCandidatsPasDeTempsAddNesAvant(LocalDateTime birthDate){
+        // 4) Récupérer les candidats qui n'ont pas de temps additionnel et qui sont nés avant le 01/01/2000
+        return candidateRepository.findAllByHasExtraTimeIsFalseAndBirthDateBefore(LocalDateTime.parse("01-01-2000"));
+    }
 
 }
