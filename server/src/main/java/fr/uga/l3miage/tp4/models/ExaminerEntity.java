@@ -15,7 +15,6 @@ public class ExaminerEntity extends UserEntity {
     @ManyToOne
     private TestCenterEntity testCenter;
 
-
     //unidirectionnelle donc pas utilisation de "mappedBy"
     @OneToMany
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
