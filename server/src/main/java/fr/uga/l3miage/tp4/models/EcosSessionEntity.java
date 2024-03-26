@@ -3,7 +3,6 @@ package fr.uga.l3miage.tp4.models;
 import fr.uga.l3miage.tp4.enums.SessionStatus;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -19,11 +18,11 @@ public class EcosSessionEntity {
 
      private SessionStatus status;
 
-     @OneToMany(mappedBy = "ecoSession")
+     @OneToMany(mappedBy = "ecosSession")
     private Set<ExamEntity> exams;
 
      @OneToOne
-    private EcoSessionProgrammationEntity ecoSessionProgrammation;
+    private EcosSessionProgrammationEntity ecoSessionProgrammation;
 
 
 }

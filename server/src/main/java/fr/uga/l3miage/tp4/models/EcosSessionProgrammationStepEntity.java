@@ -1,10 +1,5 @@
 package fr.uga.l3miage.tp4.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,6 +19,6 @@ public class EcosSessionProgrammationStepEntity {
     private String description;
 
     @ManyToOne
-    private EcoSessionProgrammationEntity ecoSessionProgrammation;
+    private EcosSessionProgrammationEntity ecoSessionProgrammation;
 
 }
