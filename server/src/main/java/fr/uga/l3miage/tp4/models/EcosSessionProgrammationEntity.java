@@ -6,8 +6,11 @@ import javax.persistence.*;
 public class EcosSessionProgrammationEntity {
     @Id
     private Long id;
-
+    
     private String label;
 
-    //TODO OneToMany relationship with EchosSessionProgrammationStepEntity
+    @OneToMany(mappedBy = "ecosSessionProgrammationEntities")
+    private EcosSessionProgrammationStepEntity ecosSessionProgrammationStepEntities;
+
+    
 }

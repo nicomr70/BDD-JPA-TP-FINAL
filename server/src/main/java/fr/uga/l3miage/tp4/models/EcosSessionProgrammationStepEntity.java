@@ -13,4 +13,8 @@ public class EcosSessionProgrammationStepEntity {
     private TestCenterCode code;
     private String university;
     private String city;
-}
+
+    @ManyToOne
+    private EcosSessionProgrammationEntity ecosSessionProgrammationEntities;
+
+}   
