@@ -8,6 +8,9 @@ import java.util.Set;
 
 @Repository
 public interface ExamRepository extends JpaRepository<ExamEntity, Long> {
-    Set<ExamEntity> findDistinctBySkillEntitiesNameContainingIgnoreCase(String skillName);
+
+    // Récupérer la liste des examens qui évaluent au moins une compétence en lien avec 'cardio' contenu dans le nom.(fonction + ExamComponent)
+    Set<ExamEntity> findBySkillEntitiesAndNameContainingIgnoreCase(String skillName);
+
 
 }

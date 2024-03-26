@@ -5,7 +5,7 @@ import fr.uga.l3miage.tp4.models.CandidateEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Repository
@@ -18,7 +18,7 @@ public interface CandidateRepository extends JpaRepository<CandidateEntity,Long>
     Set<CandidateEntity> findByTestCenterEntityCode(TestCenterCode code);
 
     //Récupérer les candidats qui n'ont pas de temps additionnel et qui sont nés avant le 01/01/2000
-    Set<CandidateEntity> findByHasExtraTimeFalseAndBirthDateBefore(LocalDateTime date);
+    Set<CandidateEntity> findByHasExtraTimeFalseAndBirthDateBefore(LocalDate date);
 
 
 }

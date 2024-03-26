@@ -29,4 +29,9 @@ public class EcosSessionProgrammationStepComponent {
     public void deleteEcosSessionProgrammationStep(Long id){
         ecosSessionProgrammationStepRepository.deleteById(id);
     }
+
+    public EcosSessionProgrammationStepEntity getLastStepOfProgrammation(){
+        return ecosSessionProgrammationStepRepository.findTopByOrderByDateTimeDesc();
+    }
 }
+
