@@ -15,7 +15,7 @@ public class CandidateComponent {
 
     private final CandidateRepository candidateRepository;
 
-    public CandidateEntity getCandidate(long id){
+    public CandidateEntity getCandidate(Long id){
         return candidateRepository.findById(id).orElseThrow();
 
     }
@@ -24,7 +24,7 @@ public class CandidateComponent {
         return candidateRepository.save(candidateEntity);
     }
 
-    public CandidateEntity updateCandidate(long id, CandidateEntity candidateEntity){
+    public CandidateEntity updateCandidate(Long id, CandidateEntity candidateEntity){
         CandidateEntity ancien = candidateRepository.findById(id).orElseThrow();
         ancien.setFirstname(candidateEntity.getFirstname());
         ancien.setLastname(candidateEntity.getLastname());
@@ -36,7 +36,7 @@ public class CandidateComponent {
 
     }
 
-    public void deleteCandidate(long id){
+    public void deleteCandidate(Long id){
         candidateRepository.deleteById(id);
     }
 
