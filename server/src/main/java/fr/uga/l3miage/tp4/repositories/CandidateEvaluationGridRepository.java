@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CandidateEvaluationGridRepository extends JpaRepository<CandidateEvaluationGridEntity, Long>  {
+  Set<CandidateEvaluationGridEntity> findAllByGradeLessThanEqual(double grade);
 }
