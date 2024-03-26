@@ -20,9 +20,9 @@ public class TestCenterEntity {
     @Column(nullable = false)
     private String city;
 
-    @OneToMany(mappedBy = "TestCenter")
+    @OneToMany(mappedBy = "TestCenter") // La liste des candidats pour un centre de test
     private Set<CandidateEntity> candidates;
-    @OneToMany(mappedBy = "TestCenter")
+    @OneToMany(mappedBy = "TestCenter") // La liste des Examinateurs pour un Centre de test
     private  Set<ExaminerEntity> examiners;
 
 }

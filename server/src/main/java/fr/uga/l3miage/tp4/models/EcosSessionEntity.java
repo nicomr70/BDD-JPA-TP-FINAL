@@ -16,8 +16,7 @@ public class EcosSessionEntity {
     private LocalDateTime endDate;
     private SessionStatus status;
 
-    @OneToMany(mappedBy = "EcosSession")
+    @OneToMany(mappedBy = "EcosSession") // la liste des examens d'une EcosSession
     private Set<ExamEntity> exams;
-    @OneToOne
-    private  EcosSessionProgrammationEntity ecosSessionProgrammation;
+
 }

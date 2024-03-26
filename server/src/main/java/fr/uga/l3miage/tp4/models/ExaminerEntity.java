@@ -12,8 +12,8 @@ public class ExaminerEntity extends  UserEntity{
     @Column(nullable = false)
     private String password;
     @OneToMany  // La grille d'évaluation à remplire par l'examinateur
-    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntitySet;
-    @ManyToOne
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
+    @ManyToOne // le Centre de test que l'examinateur appartient
     private TestCenterEntity testCenter;
 
 }

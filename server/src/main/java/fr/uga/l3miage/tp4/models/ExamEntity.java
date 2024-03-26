@@ -17,8 +17,8 @@ public class ExamEntity {
     @OneToMany
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 
-    @ManyToMany(mappedBy = "exam")
+    @ManyToMany(mappedBy = "exam") // La liste des compétences requises pour un exam
     private Set<SkillEntity> skills;
-    @ManyToOne
+    @ManyToOne // une EcosSession
     private EcosSessionEntity ecosSession;
 }

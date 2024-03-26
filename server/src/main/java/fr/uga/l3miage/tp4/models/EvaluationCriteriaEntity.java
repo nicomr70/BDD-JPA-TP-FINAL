@@ -13,6 +13,6 @@ public class EvaluationCriteriaEntity {
     @Column(nullable = false)
     private String description;
     private  Boolean hasCandidatePerformedCriteria;
-    @ManyToMany
+    @ManyToMany // La Liste des grilles d'evaluation d'un candidat
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGrids;
 }
