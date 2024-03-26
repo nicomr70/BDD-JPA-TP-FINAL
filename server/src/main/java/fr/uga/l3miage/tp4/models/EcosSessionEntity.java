@@ -1,12 +1,18 @@
 package fr.uga.l3miage.tp4.models;
 
 import fr.uga.l3miage.tp4.enums.SessionStatus;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class EcosSessionEntity {
 
     @Id
@@ -24,7 +30,6 @@ public class EcosSessionEntity {
 
     @OneToOne
     private  EcosSessionProgrammationEntity ecosSessionProgrammationEntity;
-
 
     @OneToMany(mappedBy = "ecosSessionEntity")
     private Set<ExamEntity> examEntities;

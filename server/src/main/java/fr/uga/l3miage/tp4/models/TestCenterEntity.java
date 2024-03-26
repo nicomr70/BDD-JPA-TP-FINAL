@@ -2,11 +2,17 @@ package fr.uga.l3miage.tp4.models;
 
 
 import fr.uga.l3miage.tp4.enums.TestCenterCode;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class TestCenterEntity {
 
     @Id
