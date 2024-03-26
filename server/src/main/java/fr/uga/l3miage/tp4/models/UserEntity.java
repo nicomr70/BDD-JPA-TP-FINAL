@@ -1,10 +1,9 @@
 package fr.uga.l3miage.tp4.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class   UserEntity {
     @Id
     Long id;
@@ -14,6 +13,7 @@ public abstract class   UserEntity {
     String email;
     @Column(unique = true)
     String phoneNumber;
+
 
 
 
