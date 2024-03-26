@@ -5,4 +5,5 @@ import fr.uga.l3miage.tp4.models.CandidateEvaluationGridEntity;
 
 @Repository
 public interface CandidateEvaluationGridEntityRepository extends JpaRepository<CandidateEvaluationGridEntity, Long> {
+
 }
