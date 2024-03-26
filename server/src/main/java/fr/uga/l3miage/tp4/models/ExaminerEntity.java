@@ -8,7 +8,7 @@ import java.util.Set;
 public class ExaminerEntity extends UserEntity {
     @Column(length = 6)
     private String login;
-    
+
     private String password;
 
     @ManyToOne
