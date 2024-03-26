@@ -1,6 +1,7 @@
 package fr.uga.l3miage.tp4.models;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -9,6 +10,7 @@ import java.util.Set;
 
 @Entity
 @Getter
+@Setter
 public class CandidateEvaluationGridEntity {
     @Id
     private Long sheetNumber;

@@ -2,6 +2,7 @@ package fr.uga.l3miage.tp4.models;
 
 import fr.uga.l3miage.tp4.enums.SessionStatus;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -9,6 +10,7 @@ import java.util.Set;
 
 @Entity
 @Getter
+@Setter
 public class EcosSessionEntity {
     @Id
     private Long id;

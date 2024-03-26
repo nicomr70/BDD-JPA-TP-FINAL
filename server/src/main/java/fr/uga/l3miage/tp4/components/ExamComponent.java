@@ -16,6 +16,29 @@ import java.util.stream.Collectors;
 public class ExamComponent {
     private final ExamRepository examRepository;
 
+    public ExamEntity getExam(Long id){
+        return examRepository.findById(id).orElseThrow();
+    }
+
+    public ExamEntity createCandidate(ExamEntity examEntity){
+        return examRepository.save(examEntity);
+    }
+
+    public void deleteCandidate(Long id){
+        examRepository.deleteById(id);
+    }
+
+    public ExamEntity updateCandidate(Long id, ExamEntity examEntity){
+        ExamEntity ancien = examRepository.findById(id).orElseThrow();
+        ancien.setName(examEntity.getName());
+        ancien.setWeight(examEntity.getWeight());
+        ancien.setEndDate(examEntity.getEndDate());
+        ancien.setStartDate(examEntity.getStartDate());
+        ancien.setEcosSessionEntity(examEntity.getEcosSessionEntity());
+        return examRepository.save(ancien);
+
+    }
+
     // Cette méthode récupère tous les examens de cardiologie
     public Set<ExamEntity> getAllCardioExam(){
         return examRepository.findAll().stream()
@@ -23,6 +46,5 @@ public class ExamComponent {
                         skill.getName().contains("cardio")))
                 .collect(Collectors.toSet());
     }
-
 
 }

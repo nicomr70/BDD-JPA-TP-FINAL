@@ -9,6 +9,7 @@ import java.util.Set;
 
 @Entity
 @Getter
+@Setter
 public class ExamEntity {
     @Id
     private Long id;
