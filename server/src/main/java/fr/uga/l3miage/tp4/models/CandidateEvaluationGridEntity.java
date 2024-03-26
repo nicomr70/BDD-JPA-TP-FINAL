@@ -13,6 +13,7 @@ public class CandidateEvaluationGridEntity {
     private double grade ;
     private LocalDateTime submissionDate;
 
+
    @ManyToOne
     private ExamEntity examEntity;
     @ManyToOne

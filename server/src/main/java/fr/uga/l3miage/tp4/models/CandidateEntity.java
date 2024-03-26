@@ -9,7 +9,7 @@ public class CandidateEntity extends UserEntity {
     private boolean hasExtraTime;
 
     @ManyToOne
-    private TestCenterEntity testCenters;
-   @OneToMany (mappedBy = "candidate")
+    private TestCenterEntity testCenterEntity  ;
+   @OneToMany (mappedBy = "candidateEntity")
     private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 }

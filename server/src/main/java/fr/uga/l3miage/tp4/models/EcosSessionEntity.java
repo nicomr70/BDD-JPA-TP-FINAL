@@ -17,7 +17,7 @@ public class EcosSessionEntity {
     @Enumerated(EnumType.STRING)
     private SessionStatus status;
    @OneToMany(mappedBy = "ecosSessionEntity")
-    private Set<ExamEntity> examsEntity;
+    private Set<ExamEntity> examEntities;
    @OneToOne
-    private EcosSessionProgrammationEntity EcosSessionProgrammationEntity;
+    private EcosSessionProgrammationEntity ecosSessionProgrammationEntity;
 }

@@ -5,14 +5,12 @@ import java.util.Set;
 
 @Entity
 public class ExaminerEntity extends UserEntity {
-    @Column(length = 6)
     private String login;
     private String password;
 
     @ManyToOne
-    private TestCenterEntity testCenters;
+    private TestCenterEntity testCenterEntity;
     @OneToMany (mappedBy = "examinerEntity")
-    @JoinColumn(name = "examiner_id")
- private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
+    private Set<CandidateEvaluationGridEntity> candidateEvaluationGridEntities;
 
 }

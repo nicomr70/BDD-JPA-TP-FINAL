@@ -12,6 +12,6 @@ public class EcosSessionProgrammationEntity {
     private Long id;
     private String label;
 
-   @OneToMany(mappedBy = "EcosSessionProgrammation")
+   @OneToMany(mappedBy = "ecosSessionProgrammation")
     private Set<EcosSessionProgrammationStepEntity> ecosSessionProgrammationStepEntities;
 }
