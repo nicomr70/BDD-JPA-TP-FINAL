@@ -2,7 +2,6 @@ package fr.uga.l3miage.tp4.models;
 
 import lombok.*;
 
-import javax.persistence.DiscriminatorColumn;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
