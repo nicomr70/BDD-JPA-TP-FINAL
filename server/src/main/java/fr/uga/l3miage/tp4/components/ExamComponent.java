@@ -1,17 +1,25 @@
 package fr.uga.l3miage.tp4.components;
 
+import fr.uga.l3miage.tp4.models.ExamEntity;
+import fr.uga.l3miage.tp4.models.SkillEntity;
+import fr.uga.l3miage.tp4.repositories.ExamRepository;
+import fr.uga.l3miage.tp4.repositories.SkillRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import java.util.Set;
 
 
 @Component
 @RequiredArgsConstructor
 public class ExamComponent {
+    private final ExamRepository examRepository;
 
-    /* TODO à implémenter
+    private final SkillRepository skillRepository;
+    // TODO à implémenter
     public Set<ExamEntity> getAllCardioExam(){
-        return null;
+        return examRepository.findAllByEvalueContaining(skillRepository.findAllByNameContains("test"));
     }
-    */
+
 
 }
