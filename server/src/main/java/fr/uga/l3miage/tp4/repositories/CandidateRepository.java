@@ -1,0 +1,22 @@
+package fr.uga.l3miage.tp4.repositories;
+
+import fr.uga.l3miage.tp4.models.CandidateEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import fr.uga.l3miage.tp4.enums.TestCenterCode;
+import fr.uga.l3miage.tp4.models.CandidateEntity;
+
+import java.util.Set;
+import java.time.LocalDate;
+
+@Repository
+public interface CandidateRepository extends JpaRepository<CandidateEntity,Long> {
+
+    //Récupérer la liste des candidats du TestCenter
+    Set<CandidateEntity> findByTestCenterEntityCode(TestCenterCode code);
+
+    //Récupérer les candidats qui n'ont pas de temps additionnel et qui sont nés avant le 01/01/2000
+    Set<CandidateEntity> findByHasExtraTimeFalseAndBirthDateBefore(LocalDate date);
+
+}
