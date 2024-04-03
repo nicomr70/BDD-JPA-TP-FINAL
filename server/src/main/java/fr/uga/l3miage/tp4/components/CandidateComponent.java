@@ -7,10 +7,15 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class CandidateComponent {
 
-    /* TODO à implémenter
-    public Set<CandidateEntity> getAllEliminatedCandidate(){
-        return null;
+    CandidateEvaluationGridRepository candidateEvaluationGridRepository;
+
+    public Set<CandidateEntity> getAllEliminatedCandidates() {
+        Set<CandidateEvaluationGridEntity> evaluationGridEntities = candidateEvaluationGridRepository.findAllByGradeLessThanEqual(5.00);
+        Set<CandidateEntity> candidates = new HashSet<>();
+        for (CandidateEvaluationGridEntity grid : evaluationGridEntities) {
+            //candidates.add(grid.candidate());
+        }
+        return candidates;
     }
-    */
 
 }
