@@ -6,7 +6,6 @@ import java.util.Set;
 
 @Entity
 public class SkillEntity {
-
     @Id
     private Long id;
 

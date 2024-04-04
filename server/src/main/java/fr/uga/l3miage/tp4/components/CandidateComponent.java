@@ -49,7 +49,7 @@ public class CandidateComponent {
         return candidateRepository.findByExamScore(5);
     }
 
-    /*Récupérer les candidats qui n'ont pas de temps additionnel et qui sont nés avant le 01/01/2000(fonction nommée)*/
+    //Récupérer les candidats qui n'ont pas de temps additionnel et qui sont nés avant le 01/01/2000(fonction nommée)
     public Set<CandidateEntity> getAllWithoutExtraTimeWithBirthDay(){
         return candidateRepository.findByExtraTime(LocalDate.of(2000, 1, 1));
     }
